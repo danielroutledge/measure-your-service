@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {{ govukBackLink({
+        text: "Back",
+        href: "./"
+      }) }}
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Hypothesis 1
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                    Capturing Assessment type
+                </h1>
+                <p class="govuk-body-l">
+                    <strong class="govuk-tag govuk-tag--green">
+                        Supported
+                    </strong>
+                </p>
+
+                <p class="govuk-body-l">
+                    This hypothesis includes an <strong>action</strong> for a <strong>user</strong> that
+                    the team believes will have an <strong>outcome</strong>.
+                </p>
+                <p class="govuk-body-l">
+                    The hypothesis must be <strong>tested</strong> in some way, and may have <strong>risks</strong>.
+                </p>
+
+                <div class="hypothesis-box">
+                    <h2 class="govuk-heading-m" id="action">We believe if we...</h2>
+                    <p class="govuk-body-m">
+                        create a way to record whether the assessment was done by phone, video, in person, or on paper
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="user">for a...</h2>
+                    <p class="govuk-body-m">
+                        Healthcare Professional
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="outcome">it will mean that...</h2>
+                    <p class="govuk-body-m">
+                        they will only have to record the type of assessment once.
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="test">We'll know we're right when...</h2>
+                    <p class="govuk-body-m">
+                        they successfully record in one place how they conduct an assessment.
+                    </p>
+                </div>
+
+                <h2 class="govuk-heading-l" id="tickets">Tickets</h2>
+                <p class="govuk-body-l">
+                    The following tickets implement the <strong>action</strong> of this hypothesis.
+                </p>
+                <p class="govuk-heading-m govuk-!-margin-bottom-3">
+                    WCA Version 0.3
+                </p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/browse/HTRB-315">HTRB-315</a>, Capture the assessment channel (WCA)</li>
+                </ul>
+                <p class="govuk-heading-m govuk-!-margin-bottom-3">
+                    PIP Version 0.4
+                </p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/browse/HTRB-330">HTRB-330</a>, Capture the assessment channel (PIP)</li>
+                </ul>
+
+                <h2 class="govuk-heading-l" id="impacts">Impacts</h2>
+                <p class="govuk-body-l">
+                    The action of a hypothesis has <strong>impacts</strong>.
+                </p>
+                <p class="govuk-body-l">
+                    These impacts can be assessed against the programme <a href="vision">vision</a>.
+                </p>
+                <div class="vision-box">
+                    <strong class="govuk-tag govuk-tag--simple">
+                        Simple
+                    </strong>
+                    <strong class="govuk-tag govuk-tag--simple">
+                        2
+                    </strong>
+                    <span class="govuk-body-m">Vision aim</span>
+                    <p class="govuk-body-m no-margin-bottom">
+                        People will only have to provide information once
+                    </p>
+                </div>
+                <p class="govuk-body-m">
+                    could be<strong class="govuk-tag--green"> positively </strong>impacted by...
+                </p>
+                <ul class="govuk-list govuk-list--bullet govuk-list--bullet-impacts">
+                    <li>Assessment type field will reduce the need to record it elsewhere</li>
+                </ul>
+
+                <div class="vision-box">
+                    <strong class="govuk-tag govuk-tag--accurate">
+                        Accurate
+                    </strong>
+                    <strong class="govuk-tag govuk-tag--accurate">
+                        4
+                    </strong>
+                    <span class="govuk-body-m">Vision aim</span>
+                    <p class="govuk-body-m no-margin-bottom">
+                        We will use data to make continuous improvements to the service
+                    </p>
+                </div>
+                <p class="govuk-body-m">
+                    could be<strong class="govuk-tag--green"> positively </strong>impacted by...
+                </p>
+                <ul class="govuk-list govuk-list--bullet govuk-list--bullet-impacts">
+                    <li>Recording assessment type in a dedicated field will reduce the opportunity for different types to be recorded on the same assessment</li>
+                </ul>
+                
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

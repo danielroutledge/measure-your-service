@@ -1,0 +1,271 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-header";
+@import "patterns/step-by-step-nav";
+@import "patterns/step-by-step-related";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Remove Crown
+
+.govuk-header__logo { display:none; }
+.govuk-header__content { padding-left:0; }
+
+// Key details Bar
+
+.key-details-bar {
+    background-color: #005ea5;
+}
+
+.key-details-bar .key-details-bar__key-details {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px 30px 20px 30px;
+    position: relative;
+    font-family: "GDS Transport";
+}
+
+.key-details-bar .key-details-bar__key-details * {
+    color: #fff;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__name {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11111;
+    margin-right: 10px;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 12px;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__status {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: 5px 8px 0;
+    color: #005ea5;
+    background-color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: right;
+    margin: 5px 0 0;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    content: ' ';
+    padding-top: 10px;
+    margin-top: 6px;
+}
+
+.key-details-bar .key-details-bar__key-details dd, .key-details-bar .key-details-bar__key-details dt {
+    float: left;
+    font-size: 19px;
+    margin-right: 5px;
+}
+
+.key-details-bar .key-details-bar__key-details dd {
+    margin-right: 20px;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__top-block::after, .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block::after {
+    clear: both;
+    content: ' ';
+    display: block;
+}
+
+// Secondary Nav
+
+.navigation-secondary {
+    border-bottom: 1px solid #bfc1c3;
+    margin: auto;
+    max-width: 1060px;
+}
+
+.navigation-secondary h4 {
+    margin: 0 auto;
+    float: left;
+    display: block;
+    padding: 15px 0px 15px 0px;
+}
+
+.navigation-secondary ul {
+    margin: 0 auto;
+    max-width: 1060px;
+    padding-left: 0;
+}
+
+.navigation-secondary li {
+    float: right;
+    list-style-type: none;
+}
+
+.navigation-secondary .active:visited {
+    color: #0b0c0c;
+}
+
+.navigation-secondary a:visited {
+    color: #005ea5;
+}
+
+.navigation-secondary .active {
+    box-shadow: inset 0px -5px 0px 0px #005ea5;
+    color: #0b0c0c;
+    text-decoration: none;
+}
+
+.navigation-secondary ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.navigation-secondary a {
+    display: block;
+    padding: 20px 15px 25px 15px;
+}
+
+.navigation-secondary .active:visited {
+    color: #0b0c0c;
+  }
+
+  .navigation-secondary a:visited {
+    color: #005ea5;
+  }
+  
+  .navigation-secondary a:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .navigation-secondary .active {
+    box-shadow: inset 0px -5px 0px 0px #005ea5;
+    color: #0b0c0c;
+    text-decoration: none;
+  }
+
+// Assessments Header
+
+.govuk-header__container { border-bottom:0; margin-bottom:0; }
+.govuk-header { border-bottom:0; }
+
+// Hypothesis
+
+.hypothesis-label {
+    font-size: 24px;
+    color: #505a5f;
+    font-family: "GDS Transport";
+    margin-bottom: 10px;
+}
+
+.hypothesis-box {
+    border-left: 8px solid #eeefef;
+    padding: 15px;
+    margin-bottom: 42px;
+}
+
+// Vision tags
+.govuk-tag--simple {
+    color: #ffffff;
+    background: #6ea256;
+    margin-bottom: 8px;
+}
+
+.govuk-tag--responsive {
+    color: #ffffff;
+    background: #27a297;
+    margin-bottom: 8px;
+}
+
+.govuk-tag--timely {
+    color: #ffffff;
+    background: #2b8cc3;
+    margin-bottom: 8px;
+}
+
+.govuk-tag--accurate {
+    color: #ffffff;
+    background: #0b5791;
+    margin-bottom: 8px;
+}
+
+.govuk-tag--understandable {
+    color: #ffffff;
+    background: #894380;
+    margin-bottom: 8px;
+}
+
+.govuk-tag--title {
+    width: 90%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+// Impacts list
+.govuk-list--bullet-impacts {
+    margin-bottom: 42px;
+    font-size: 24px;
+}
+
+// Vision aim
+.vision-table {
+    margin: 15px;
+}
+
+.vision-box {
+    background: #eeefef;
+    padding: 12px;
+    margin-bottom: 24px;
+    margin-top: 42px;
+}
+
+.vision-example {
+    font-size: 16px;
+}
+
+.govuk-grid-column-one-fifth {
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.no-margin-bottom { margin-bottom: 0px; }
+
+// NOtes
+
+.notes-box {
+    color: #383f43;
+    background: #eeefef;
+    padding:20px;
+}
+
+// No bottom border 
+.no-bottom-border { border-bottom:0; }
+
+// No underline on links
+
+.govuk-link--no-underline { text-decoration: none; }
+.govuk-link--no-underline:hover { text-decoration: underline; }
+
+// horizontal rule
+
+hr { height:0px; border-top:1px solid #b1b4b6; border-bottom: 0;}

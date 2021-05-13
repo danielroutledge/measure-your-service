@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "home" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/home-header.html" %}
+<div class="govuk-width-container {{ containerClasses }} govuk-!-margin-bottom-9">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <ul class="govuk-list">
+        <li><a href="#next-release" class="govuk-link--no-visited-state govuk-link--no-underline">Next release</a></li>
+        <li><a href="#current-release" class="govuk-link--no-visited-state govuk-link--no-underline">Current release</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+     
+      <!-- Next release -->
+
+      <h2 class="govuk-heading-l" id="next-release">Next release</h2>
+      <p class="govuk-body-l">These prototypes are for testing the next release of Measure Your Service.</p>
+
+      <h3 class="govuk-heading-m"><a href="mys-version-0-1/">MYS Version 0.1</a></h3>
+
+      <hr class="govuk-!-margin-top-9 govuk-!-margin-bottom-6">
+
+     <!-- Current release -->
+
+      <h2 class="govuk-heading-l" id="current-release">Current release</h2>
+      <p class="govuk-body-l">These prototypes represent the current release of Measure Your Service.</p>
+
+      <p>There are no current releases of this service.</p>
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
