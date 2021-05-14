@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+             <!-- <a href="javascript:history.back()" class="govuk-back-link">Back</a> -->
+
+              <div class="govuk-breadcrumbs" style="margin-top:0">
+                <ol class="govuk-breadcrumbs__list">
+                  <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="../find-out">What do you want to find out about</a>
+                  </li>
+                  <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="vision-heatmap">Health vision</a>
+                  </li>
+
+                  <li class="govuk-breadcrumbs__list-item">
+                   Measuring timely
+                  </li>
+                 
+                </ol>
+              </div>
+
+              <h1 class="govuk-heading-l">How we're measuring timely</h1>
+              <p class="govuk-body-l">We will gather the minimum information required to make a decision at the earliest point</p>
+
+              <p class="govuk-body-l">These are the hypotheses to test for the Health Assessment Service.</p>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col" width="5%"> # </th>
+                    <th class="govuk-table__header" scope="col" width="30%"> Short title </th>
+                    <th class="govuk-table__header" scope="col" width="45%"> Impact or risk </th>
+                    <th class="govuk-table__header" scope="col"  aria-sort="none" width="10%"> Outcome </th>
+                    <th class="govuk-table__header" scope="col" width="10%"> Team</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <a href="../performance-framework/hypothesis-0002"> 02</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      Removing physical assessment from phone
+                    </td>
+                    <td class="govuk-table__cell">
+                      Removing irrelevant fields from the telephone assessment will make it shorter
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                      Positive
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <a href="#"> 03</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      Ironing out confusion between abandon/curtail options
+                    </td>
+                    <td class="govuk-table__cell">
+                      Notifying the HCP as soon as LCWRA threshold is reached makes assessment shorter
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--red">
+                      Negative
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <a href="#"> 03</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      Ironing out confusion between abandon/curtail options
+                    </td>
+                    <td class="govuk-table__cell">
+                      HCP stops as soon as LCWRA threshold reached, DM needs to call claimant back as not enough evidence recorded
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                     Positive
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <a href="#"> 07</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      Suggest the HCP can end the assessment when evidence for functional LCWRA has been found
+                    </td>
+                    <td class="govuk-table__cell">
+                      Notifying the HCP as soon as LCWRA threshold is reached makes assessment shorter
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                      Positive
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+                  
+
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <a href="#"> 07</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      Suggest the HCP can end the assessment when evidence for functional LCWRA has been found
+                    </td>
+                    <td class="govuk-table__cell">
+                      HCPs can end an assessment once the threshold is reached - no unnecessary extra work
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                      Positive
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+                  
+               
+                                                      
+            
+
+               
+
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

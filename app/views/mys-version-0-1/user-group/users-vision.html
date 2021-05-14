@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+              <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+              <div id="hint" class="hypothesis-label">
+                Health Programme
+            </div>
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                User group vision
+            </h1>
+
+
+            <p class="govuk-body-l">
+              There are frout different categories of data to think about dynamic data creation and consumption.
+          </p>
+
+          <p class="govuk-body-l">
+              Each area shows the decision movement between design and measurement. These are
+              <strong>Strategy</strong>,
+              <strong>Policy</strong>,
+              <strong>Operational</strong> and
+              <strong>Citizen</strong>.  
+          </p>
+
+          <p class="govuk-body-l">
+            These ecosystems help break down where data can be captured against the overall vision.
+            support for them.
+          </p>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+           
+                     <img src="/public/images/user-group-vision.png" width="100%" > 
+                 
+
+
+                </div>
+
+
+                  </div>
+                </div>
+              </main>
+                          
+                        
+            
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

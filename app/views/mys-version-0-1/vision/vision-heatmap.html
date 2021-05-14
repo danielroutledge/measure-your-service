@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+              <div class="govuk-breadcrumbs" style="margin-top:0">
+                <ol class="govuk-breadcrumbs__list">
+                  <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="../find-out">What do you want to find out about</a>
+                  </li>
+                  <li class="govuk-breadcrumbs__list-item">
+                   Health Vision
+                  </li>
+                 
+                </ol>
+              </div>
+            
+        
+                  
+                    <nav class="navigation-secondary">
+                      <ul>
+                        <li>
+                          <a href="../user-group/users-heatmap">User group</a>
+                        </li>
+
+                        <li>
+                          <a href="#" class="active" aria-current="section">Vision</a>
+                        </li>
+                      </ul>
+                    </nav>
+              
+                  </div>
+                </div>
+
+                
+                    <h1 class="govuk-heading-l" style="padding-top:1em">    Vision alignment</h1>
+
+                    <p >Team Teal have worked with teams to establish how their service can be measured.</p>
+
+                    <p >Eeach team's design hypotheses have been aligned to the <a href="../vision">health vision</a> to show coverage of data collection.  </p>
+                   
+
+
+                    <div class="govuk-grid-row">
+                      <div class="govuk-grid-column-one-third">
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                          <h1 class="govuk-fieldset__heading">
+                            Select team
+                          </h1>
+                        </legend>
+                        <div id="waste-hint" class="govuk-hint">
+                          Select all that apply.
+                        </div>
+                        <div class="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="team-royal-blue" name="team-vision" type="checkbox" value="royal-blue" checked>
+                            <label class="govuk-label govuk-checkboxes__label" for="team-royal-blue">
+                             Royal blue
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="team-2" name="team-vision" type="checkbox" value="team2">
+                            <label class="govuk-label govuk-checkboxes__label" for="team-2">
+                             Different team
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="team-3" name="team-vision" type="checkbox" value="team3">
+                            <label class="govuk-label govuk-checkboxes__label" for="team-3">
+                             Another team
+                            </label>
+                          </div>
+                         
+                        </div>
+                    
+                      </fieldset>
+                    </div>
+                  </div>
+
+                  <div class="govuk-grid-column-two-thirds">
+                    <a href="measuring-timing"> <img src="/public/images/vision-heatmap.png" width="100%" > </a>
+                  </div>
+
+
+                </div>
+
+
+                  </div>
+                </div>
+              </main>
+                          
+                        
+            
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

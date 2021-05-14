@@ -10,10 +10,12 @@
 {% include "includes/service-status.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
-    {{ govukBackLink({
+   <!--{{ govukBackLink({
         text: "Back",
         href: "./"
-      }) }}
+      }) }} -->
+
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
