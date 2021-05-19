@@ -8,10 +8,17 @@
         <dt class="key-details-bar__nino">PIP v0.6 / WCA v0.6</dt>
       </div>
 
+      {% if data['team'] != 'clear' %}
+     
+      
       <div class="key-details-bar__bottom-block">
-        <dt>Team:</dt>
-        <dd>Royal Blue</dd>
-      </div>
+         <dt>Team:</dt>
+         <dd>{{ data['team'] }}</dd>
+       </div>
+ 
+
+
+       {% endif %} 
 
     </dl>
 </section>

@@ -94,59 +94,41 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Secondary Nav
 
-.navigation-secondary {
-    border-bottom: 1px solid #bfc1c3;
-    margin: auto;
-    max-width: 1060px;
-}
-
-.navigation-secondary h4 {
-    margin: 0 auto;
-    float: left;
-    display: block;
-    padding: 15px 0px 15px 0px;
-}
-
-.navigation-secondary ul {
-    margin: 0 auto;
-    max-width: 1060px;
-    padding-left: 0;
-}
-
-.navigation-secondary li {
-    float: right;
-    list-style-type: none;
-}
-
-.navigation-secondary .active:visited {
-    color: #0b0c0c;
-}
-
-.navigation-secondary a:visited {
-    color: #005ea5;
-}
-
-.navigation-secondary .active {
-    box-shadow: inset 0px -5px 0px 0px #005ea5;
-    color: #0b0c0c;
-    text-decoration: none;
-}
-
 .navigation-secondary ul:after {
     content: "";
     display: block;
     clear: both;
-}
-
-.navigation-secondary a {
-    display: block;
-    padding: 20px 15px 25px 15px;
-}
-
-.navigation-secondary .active:visited {
-    color: #0b0c0c;
   }
-
+  
+  .navigation-secondary {
+    border-bottom: 1px solid #bfc1c3;
+    margin: auto;
+    max-width: 960px;
+  }
+  
+  .navigation-secondary ul {
+    margin: 0 auto;
+    max-width: 960px;
+    padding-left: 0;
+  }
+  
+  .navigation-secondary li {
+    float: left;
+    list-style-type: none;
+  }
+  
+  @media (max-width: 640px) {
+    .navigation-secondary li {
+      border: 0;
+      width: 100%;
+    }
+  }
+  
+  .navigation-secondary a {
+    display: block;
+    padding: 15px;
+  }
+  
   .navigation-secondary a:visited {
     color: #005ea5;
   }
@@ -160,7 +142,13 @@ $govuk-assets-path: '/govuk/assets/';
     color: #0b0c0c;
     text-decoration: none;
   }
-
+  
+  .navigation-secondary .active:visited {
+    color: #0b0c0c;
+  }
+  
+              
+            
 // Assessments Header
 
 .govuk-header__container { border-bottom:0; margin-bottom:0; }
@@ -269,3 +257,27 @@ $govuk-assets-path: '/govuk/assets/';
 // horizontal rule
 
 hr { height:0px; border-top:1px solid #b1b4b6; border-bottom: 0;}
+
+
+.breadcrumb-hack {
+    font-family: "GDS Transport", arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.14286;
+    color: #0b0c0c;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: underline;
+    background-color:transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hidden-form-hack {
+    display: none;
+}
+
+

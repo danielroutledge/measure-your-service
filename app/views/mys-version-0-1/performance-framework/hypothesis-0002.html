@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Hypothesis 2
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                    Removing physical assessment from phone
+                </h1>
+                <p class="govuk-body-l">
+                    <strong class="govuk-tag govuk-tag--green">
+                        Supported
+                    </strong>
+                </p>
+
+                <p class="govuk-body-l">
+                    This hypothesis includes an <strong>action</strong> for a <strong>user</strong> that
+                    the team believes will have an <strong>outcome</strong>.
+                </p>
+                <p class="govuk-body-l">
+                    The hypothesis must be <strong>tested</strong> in some way, and may have <strong>risks</strong>.
+                </p>
+
+                <div class="hypothesis-box">
+                    <h2 class="govuk-heading-m" id="action">We believe if we...</h2>
+                    <p class="govuk-body-m">
+                        remove physical assessment options from phone interviews
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="user">for a...</h2>
+                    <p class="govuk-body-m">
+                        Healthcare Professional
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="outcome">it will mean that...</h2>
+                    <p class="govuk-body-m">
+                        they will not be prompted unnecessarily for info that isn't needed for this type of assessment.
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="test">We'll know we're right when...</h2>
+                    <p class="govuk-body-m">
+                        they can capture sufficient information despite the removal of the 'physical' section.
+                    </p>
+
+                    <h2 class="govuk-heading-m" id="test">However, this could be harmful if...</h2>
+                    <p class="govuk-body-m">
+                        a physical assessment is needed but is not available in the interface.
+                    </p>
+                </div>
+
+                <h2 class="govuk-heading-l" id="tickets">Tickets</h2>
+                <p class="govuk-body-l">
+                    The following tickets implement the <strong>action</strong> of this hypothesis.
+                </p>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col" width="30%"> Version</th>
+                        <th class="govuk-table__header" scope="col" width="45%"> Detail</th>
+                        <th class="govuk-table__header" scope="col" width="20%"> Ticket </th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+    
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            WCA Version 0.3
+                        </td>
+                        <td class="govuk-table__cell">
+                            Remove 'Physical assessment' questions from assessments not conducted in person
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="https://dwpdigital.atlassian.net/browse/HTRB-343" target="_blank">HTRB-343</a>
+                        </td>
+                    </tbody>
+                  </table>
+
+
+                
+
+            </div>
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l" id="impacts">Measuring impacts</h2>
+
+                <p class="govuk-body-l">
+                    The action of a hypothesis has <strong>impacts</strong>.
+                </p>
+               
+
+                <p class="govuk-body">These impacts can be assessed aginst:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                    <li>the programme <a href="../vision/health-vision">health vision</a></li>
+                    <li>the <a href="../user-group/users-vision">user group vision</a> </li>
+                    </ul>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col" width="20%"> Vision</th>
+                        <th class="govuk-table__header" scope="col" width="25%"> Aim </th>
+                        <th class="govuk-table__header" scope="col" width="35%"> Impact </th>
+                        <th class="govuk-table__header" scope="col" width="10%"> Outcome </th>
+                        <th class="govuk-table__header" scope="col" width="10%"> User</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+    
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--timely">
+                                Timely
+                            </strong>
+                            <strong class="govuk-tag govuk-tag--timely">
+                                1
+                            </strong>
+                        </td>
+                        <td class="govuk-table__cell">
+                            We will gather the minimum information required to make a decision at the earliest point
+                        </td>
+                        <td class="govuk-table__cell">
+                            Removing irrelevant fields from the telephone assessment will make it shorter
+                        </td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--green">
+                          Goal
+                          </strong>
+                        </td>
+    
+                        <td class="govuk-table__cell">
+                            Operations
+                        </td>
+                      </tr>
+
+
+
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--accurate">
+                                Accurate
+                            </strong>
+                            <strong class="govuk-tag govuk-tag--accurate">
+                                1
+                            </strong>
+                        </td>
+                        <td class="govuk-table__cell">
+                            We will gather the right amount of information to make sure our decisions are accurate
+                        </td>
+                        <td class="govuk-table__cell">
+                            Removing fields from telephone assessment might risk valuable information not being collected
+                        </td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">
+                          Risk
+                          </strong>
+                        </td>
+    
+                        <td class="govuk-table__cell">
+                        Citizen
+                        </td>
+                      </tr>
+
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--responsive">
+                                Responsive
+                            </strong>
+                            <strong class="govuk-tag govuk-tag--responsive">
+                                4
+                            </strong>
+                        </td>
+                        <td class="govuk-table__cell">
+                            We will tailor the service based on the things we know (or find out) about people
+                        </td>
+                        <td class="govuk-table__cell">
+                            The assessment journey is responsive to information about channel
+                        </td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--green">
+                        Goal
+                          </strong>
+                        </td>
+    
+                        <td class="govuk-table__cell">
+                           Operations
+                        </td>
+                      </tr>
+
+    
+    
+    
+                    </tbody>
+                  </table>
+
+
+                </div>
+            </div>
+
+    </main>
+  </div>
+{% endblock %}
