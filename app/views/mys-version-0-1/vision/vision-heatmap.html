@@ -10,38 +10,22 @@
 {% include "includes/service-status.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
+    {% include "includes/breadcrumb_health_vision.html" %}
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-
-              <div class="govuk-breadcrumbs" style="margin-top:0">
-                <ol class="govuk-breadcrumbs__list">
-                  <li class="govuk-breadcrumbs__list-item">
-                    <a class="govuk-breadcrumbs__link" href="../find-out">What do you want to find out about</a>
-                  </li>
-                  <li class="govuk-breadcrumbs__list-item">
-                   Health Vision
-                  </li>
-                 
-                </ol>
-              </div>
-            
-        
-                  
                     <nav class="navigation-secondary">
                       <ul>
+                        <li>
+                          <a href="#" class="active" aria-current="section">Health vision</a>
+                        </li>
                         <li>
                           <a href="../user-group/users-heatmap">User group vision</a>
                         </li>
 
-                        <li>
-                          <a href="#" class="active" aria-current="section">Health vision</a>
-                        </li>
                       </ul>
                     </nav>
               
-                  </div>
-                </div>
 
                 
                     <h1 class="govuk-heading-l" style="padding-top:1em">    Health vision alignment</h1>
@@ -104,9 +88,6 @@
                           
                         
             
-
-            </div>
-        </div>
 
     </main>
   </div>

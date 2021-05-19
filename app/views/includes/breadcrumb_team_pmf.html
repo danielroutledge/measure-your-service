@@ -1,0 +1,47 @@
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <div class="hidden-form-hack">
+        <form action="../find-out" method="post" class="govuk-breadcrumbs__link"  value="team-clear">
+        
+          <div class="hidden-form-hack">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input"  <input class="govuk-radios__input" id="team-clear" name="team" type="radio" value="clear" {{ checked("team", "clear") }} checked>
+              <label class="govuk-label govuk-radios__label" for="team-clear" >
+               Clear team select
+              </label>
+            </div>
+            </div>
+        </div>
+
+        <button class="breadcrumb-hack">What do you want to find out about</button>
+
+      </form>
+
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <div class="hidden-form-hack">
+      <form action="../which-team" method="post" class="govuk-breadcrumbs__link"  value="team-clear">
+      
+        <div class="hidden-form-hack">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input"  <input class="govuk-radios__input" id="team-clear" name="team" type="radio" value="clear" {{ checked("team", "clear") }} checked>
+            <label class="govuk-label govuk-radios__label" for="team-clear" >
+             Clear team select
+            </label>
+          </div>
+          </div>
+      </div>
+
+      <button class="breadcrumb-hack">Select team</button>
+
+    </form>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      {{ data['team'] }}
+    </li>
+   
+  </ol>
+</div>

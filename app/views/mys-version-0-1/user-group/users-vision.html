@@ -10,11 +10,13 @@
 {% include "includes/service-status.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-              <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+             
 
               <div id="hint" class="hypothesis-label">
                 Health Programme

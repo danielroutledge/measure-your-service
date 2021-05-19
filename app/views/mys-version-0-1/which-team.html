@@ -10,42 +10,16 @@
 {% include "includes/service-status.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
+    {% include "includes/breadcrumb_select_team.html" %}
+
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
           
             <div class="govuk-grid-column-two-thirds">
 
-              <div class="govuk-breadcrumbs" style="margin-top:0">
-                <ol class="govuk-breadcrumbs__list">
-
-                    <li class="govuk-breadcrumbs__list-item">
-                      <div class="hidden-form-hack">
-                      <form action="find-out" method="post" class="govuk-breadcrumbs__link"  value="team-clear">
-                      
-                        <div class="hidden-form-hack">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input"  <input class="govuk-radios__input" id="team-clear" name="team" type="radio" value="clear" {{ checked("team", "clear") }} checked>
-                            <label class="govuk-label govuk-radios__label" for="fteam-clear" >
-                             Clear team select
-                            </label>
-                          </div>
-                          </div>
-                      </div>
-  
-                      <button class="breadcrumb-hack">What do you want to find out about</button>
-  
-                    </form>
-
-                  </li>
 
 
-                  </li>
-                  <li class="govuk-breadcrumbs__list-item">
-                    Select team
-                  </li>
-                 
-                </ol>
-              </div>
+              
             
 
               <form action="/mys-version-0-1/choose-team-hyp" method="post" class="form">
