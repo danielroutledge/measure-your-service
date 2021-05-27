@@ -7,15 +7,17 @@
 
 {% block main %}
 
-{% include "includes/service-status.html" %}
+{% include "includes/service-status-royal-blue.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
-
     {% if data['team'] != 'clear' %}
     <a href="royal-blue" class="govuk-back-link">Back</a>
-    {% else %}
+    {% elif data['journey'] == 'user-vision' %} 
+    <a href="../user-group/measuring-simple-operations" class="govuk-back-link">Back</a>
+    {% else %} 
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
      {% endif %} 
+
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">

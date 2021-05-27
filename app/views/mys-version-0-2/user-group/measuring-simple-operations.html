@@ -32,7 +32,24 @@
 
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell">
-                      <a href="../performance-framework/hypothesis-0001"> 01</a>
+
+                      <div class="hidden-form-hack">
+                        <form action="../performance-framework/hypothesis-0001" method="post" class="govuk-breadcrumbs__link"  value="journey-user-vision">
+                        
+                          <div class="hidden-form-hack">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input"  <input class="govuk-radios__input" id="journey-user-vision" name="journey" type="radio" value="user-vision" {{ checked("journey", "user-vision") }} checked>
+                              <label class="govuk-label govuk-radios__label" for="journey-user-vision" >
+                               Journey: user vision
+                              </label>
+                            </div>
+                            </div>
+                        </div>
+                
+                        <button class="hyperlink-hack">01</button>
+                
+                      </form>
+                     
                     </td>
                     <td class="govuk-table__cell">
                       Capturing Assessment type
