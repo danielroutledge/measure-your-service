@@ -10,7 +10,11 @@
 {% include "includes/service-status.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
+    {% if data['team'] != 'clear' %}
+    <a href="royal-blue" class="govuk-back-link">Back</a>
+    {% else %}
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+     {% endif %} 
 
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
@@ -26,9 +30,24 @@
                         Supported
                     </strong>
                 </p>
+            </div>
+        </div>
 
-               
-                <div class="hypothesis-box">
+
+        <nav class="navigation-secondary">
+            <ul>
+              <li>
+                <a href="#" class="active" aria-current="section">Overview</a>
+              </li>
+              <li>
+                <a href="evidence-0002">Evidence</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="hypothesis-box-top-margin">
                     <h2 class="govuk-heading-m" id="action">We believe if we...</h2>
                     <p class="govuk-body-m">
                         remove physical assessment options from phone interviews
@@ -213,7 +232,8 @@
                     </td>
                 </tbody>
               </table>
-
+              </div>
+            </div>
 
     </main>
   </div>

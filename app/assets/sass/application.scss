@@ -115,6 +115,7 @@ $govuk-assets-path: '/govuk/assets/';
   .navigation-secondary li {
     float: left;
     list-style-type: none;
+    font-size: 19px;
   }
   
   @media (max-width: 640px) {
@@ -167,6 +168,13 @@ $govuk-assets-path: '/govuk/assets/';
     border-left: 8px solid #eeefef;
     padding: 15px;
     margin-bottom: 42px;
+}
+
+.hypothesis-box-top-margin {
+    border-left: 8px solid #eeefef;
+    padding: 15px;
+    margin-bottom: 42px;
+    margin-top: 20px;
 }
 
 // Vision tags
