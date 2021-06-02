@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-xl">
+                {% if serviceName %} {{ serviceName }} {% endif %}
+              </h1>
+        
+              <p>Team Teal have worked with teams to establish how their service can be measured.</p>
+              <p>Use this service to:</p>
+        
+              <ul class="govuk-list govuk-list--bullet">
+                <li>view a teams design hypotheses and see how we're measuring against them</li>
+                <li>see how each team is aligning to the overall vision of health and the user groups within them</li>
+                <li>understand how we're defining and measuring success within the health programme</li>
+              </ul>
+        
+             
+               <div class="hidden-form-hack">
+                <form action="find-out" method="post" class="govuk-breadcrumbs__link"  value="team-clear">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input"  <input class="govuk-radios__input" id="team-clear" name="team" type="radio" value="clear" {{ checked("team", "clear") }} checked>
+                      <label class="govuk-label govuk-radios__label" for="fteam-clear" >
+                       Clear team select
+                      </label>
+                    </div>
+                    </div>
+              
+        
+                {% from "govuk/components/button/macro.njk" import govukButton %}
+        
+                  {{ govukButton({
+                    text: "Start now",
+                    isStartButton: true
+                  }) }}
+        
+             
+              </form>
+        
+              
+        
+             <!-- <h2 class="govuk-heading-m">Before you start</h2>
+        
+              <p>You can also <a href="#">register by post</a>.</p>
+        
+              <p>The online service is also available in <a href="#">Welsh (Cymraeg)</a>.</p>
+        
+              <p>You can’t register for this service if you’re in the UK illegally.</p> -->
+        
+            </div>
+        
+            <div class="govuk-grid-column-one-third">
+        
+            <!--  <aside class="app-related-items" role="complementary">
+                <h2 class="govuk-heading-m" id="subsection-title">
+                  Subsection
+                </h2>
+                <nav role="navigation" aria-labelledby="subsection-title">
+                  <ul class="govuk-list govuk-!-font-size-16">
+                    <li>
+                      <a href="#">
+                        Related link
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Related link
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="govuk-!-font-weight-bold">
+                        More <span class="govuk-visually-hidden">in Subsection</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </aside> -->
+        
+             
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

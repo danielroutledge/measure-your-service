@@ -1,0 +1,245 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status-royal-blue.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% if data['team'] != 'clear' %}
+    <a href="royal-blue" class="govuk-back-link">Back</a>
+    {% elif data['journey'] == 'user-vision' %} 
+    <a href="../user-group/measuring-simple-operations" class="govuk-back-link">Back</a>
+    {% else %} 
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+     {% endif %} 
+
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+
+            
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Hypothesis 1
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                    Capturing Assessment type
+                </h1>
+                <p class="govuk-body-l">
+                    <strong class="govuk-tag govuk-tag--green">
+                        Supported
+                    </strong>
+                </p>
+            </div>
+        </div>
+        
+        
+                <nav class="navigation-secondary">
+                    <ul>
+                      <li>
+                        <a href="#" class="active" aria-current="section">Overview</a>
+                      </li>
+                      <li>
+                        <a href="evidence-0001">Evidence</a>
+                      </li>
+                    </ul>
+                  </nav>
+
+                 
+
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+            
+
+                <div class="hypothesis-box-top-margin">
+                    <h2 class="govuk-heading-m" id="action">We believe if we...</h2>
+                    <p class="govuk-body-m">
+                        create a way to record whether the assessment was done by phone, video, in person, or on paper
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="user">for a...</h2>
+                    <p class="govuk-body-m">
+                        Healthcare Professional
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="outcome">it will mean that...</h2>
+                    <p class="govuk-body-m">
+                        they will only have to record the type of assessment once.
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="test">We'll know we're right when...</h2>
+                    <p class="govuk-body-m">
+                        they successfully record in one place how they conduct an assessment.
+                    </p>
+                </div>
+
+              
+
+
+               
+
+            </div>
+        </div>
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l" id="impacts">Measuring the impact</h2>
+
+                <p class="govuk-body">Each hypothesis:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                    
+                    <li>will make an impact somewhere in the journey or service</li>
+                    <li>relates to a specific <a href="../user-group/users-vision">user group</a></li>
+                    <li>relates to the overall <a href="../vision/health-vision">health vision</a> to show value</li>
+                    <li>has an outcome: <br> 
+                       -  <strong class="govuk-tag govuk-tag--green">
+                        Goal
+                        </strong> is a positive to work towards. <br>
+                        -  <strong class="govuk-tag govuk-tag--red">
+                            Risk
+                            </strong> is something to mitigate
+                        </li>
+                    </ul>
+
+
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col" width="35%"> Impact </th>
+                        <th class="govuk-table__header" scope="col" width="15%"> User</th>
+                        <th class="govuk-table__header" scope="col" width="15%"> Vision aim</th>
+                        <th class="govuk-table__header" scope="col" width="25%"> Subcategory </th>
+                        <th class="govuk-table__header" scope="col" width="10%"> Outcome </th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+    
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            Assessment type field will reduce the need to record it elsewhere
+                        </td>
+                        <td class="govuk-table__cell">
+                            Operations
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--simple">
+                                Simple
+                            </strong>
+                           
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--simple">
+                                2
+                            </strong> People will only have to provide information once
+                        </td>
+                       
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--green">
+                          Goal
+                          </strong>
+                        </td>
+    
+                       
+                      </tr>
+
+
+
+
+                      <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                Recording assessment type in a dedicated field will reduce the opportunity for different types to be recorded on the same assessment
+                            </td>
+                            <td class="govuk-table__cell">
+                                DWP (Policy), Digital (Strategy)
+                             </td>
+                             <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--accurate">
+                                Accurate
+                            </strong>
+                           
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--accurate">
+                                4
+                            </strong>
+                            We will use data to make continuous improvements to the service
+                        </td>
+                      
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--green">
+                         Goal
+                          </strong>
+                        </td>
+    
+                       
+                      </tr>
+
+
+                      
+    
+    
+    
+                    </tbody>
+                  </table>
+
+
+                </div>
+            </div>
+
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l" id="tickets">Tickets</h2>
+            <p>
+                The following tickets implement the action of this hypothesis.
+            </p>
+           
+
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col" width="30%"> Version</th>
+                    <th class="govuk-table__header" scope="col" width="50%"> Detail</th>
+                    <th class="govuk-table__header" scope="col" width="20%"> Ticket </th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                        WCA Version 0.3
+                    </td>
+                    <td class="govuk-table__cell">
+                        Capture the assessment channel (WCA)
+                    </td>
+                    <td class="govuk-table__cell">
+                        <a href="https://dwpdigital.atlassian.net/browse/HTRB-315" target="_blank">HTRB-315</a>
+                    </td>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        PIP Version 0.4
+                      </td>
+                      <td class="govuk-table__cell">
+                        Capture the assessment channel (PIP)
+                      </td>
+                      <td class="govuk-table__cell">
+                          <a href="https://dwpdigital.atlassian.net/browse/HTRB-330" target="_blank">HTRB-330</a>
+                      </td>
+                  </tbody>
+              </table>
+
+
+              </div>
+            </div>
+
+    </main>
+  </div>
+{% endblock %}
