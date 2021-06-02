@@ -10,30 +10,29 @@
 {% include "includes/service-status.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
-    {% include "includes/breadcrumb_health_vision.html" %}
+    {% include "includes/breadcrumb_user_vision.html" %}
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
                     <nav class="navigation-secondary">
                       <ul>
                         <li>
-                          <a href="#" class="active" aria-current="section">Health vision</a>
-                        </li>
-                        <li>
-                          <a href="../user-group/users-heatmap">User groups</a>
+                          <a href="../vision/vision-heatmap">Health vision</a>
                         </li>
 
+                        <li>
+                          <a href="#" class="active" aria-current="section">User groups</a>
+                        </li>
                       </ul>
                     </nav>
               
 
-                
-                    <h1 class="govuk-heading-l" style="padding-top:1em">    Health vision alignment</h1>
+                    <h1 class="govuk-heading-l" style="padding-top:1em"> User groups</h1>
 
-                    <p >Team Teal have worked with teams to establish how their service can be measured.</p>
+                    <p >Overlaying the <a href="users-vision">user group</a> types onto the health vision shows another view of the data coverage.</p>
 
-                    <p >Eeach team's design hypotheses have been aligned to the <a href="health-vision">health vision</a> to show coverage of data collection.  </p>
-                   
+                    
+
 
 
                     <div class="govuk-grid-row">
@@ -48,24 +47,22 @@
                         <div id="waste-hint" class="govuk-hint">
                           Select all that apply.
                         </div>
-
                         <div class="govuk-checkboxes">
-                        
-                            <form action="vision-heatmap-blank" method="post"  >
+                          
+
+                          <form action="users-heatmap" method="post"  >
                             
-                              <button class="checkbox-hack">
-                              <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="team-royal-blue" name="team-vision" type="checkbox" value="royal-blue" checked>
-                                <label class="govuk-label govuk-checkboxes__label" for="team-royal-blue">
-                                 Royal blue
-                                </label>
-                              </div>
-                         
-                    </button>
-                    
-                          </form>
-                    
-                        
+                            <button class="checkbox-hack">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="team-royal-blue" name="team-vision" type="checkbox" value="royal-blue">
+                              <label class="govuk-label govuk-checkboxes__label" for="team-royal-blue">
+                               Royal blue
+                              </label>
+                            </div>
+                       
+                  </button>
+                  
+                        </form>
                           <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="team-2" name="team-vision" type="checkbox" value="team2">
                             <label class="govuk-label govuk-checkboxes__label" for="team-2">
@@ -86,7 +83,7 @@
                   </div>
 
                   <div class="govuk-grid-column-two-thirds">
-                    <a href="measuring-timing"> <img src="/public/images/v02-health-vision-heatmap-timely1.png" width="100%" > </a>
+                    <a href="measuring-simple-operations"> <img src="/public/images/v02-user-group-vision-heatmap-blank.png" width="100%" > </a>
                   </div>
 
 
@@ -99,7 +96,5 @@
                           
                         
             
-
-    </main>
   </div>
 {% endblock %}
