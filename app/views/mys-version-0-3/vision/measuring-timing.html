@@ -1,0 +1,189 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% include "includes/breadcrumb_health_vision_detail.html" %}
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h1 class="govuk-heading-l">How we're measuring: Timely 1</h1>
+              <strong class="govuk-tag govuk-tag--timely2">
+                Timely
+            </strong>
+            <strong class="govuk-tag govuk-tag--timely2">
+                1
+            </strong>
+              <p class="govuk-body-l">We will gather the minimum information required to make a decision at the earliest point</p>
+
+              <p class="govuk-body">Each hypothesis:</p>
+              <ul class="govuk-list govuk-list--bullet">
+              
+              <li>will make an impact somewhere in the journey or service</li>
+              <li>has an outcome: <br> 
+                 -  <strong class="govuk-tag govuk-tag--green">
+                  Goal
+                  </strong> is a positive to work towards. <br>
+                  -  <strong class="govuk-tag govuk-tag--red">
+                      Risk
+                      </strong> is something to mitigate
+                  </li>
+              </ul>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col" width="5%"> # </th>
+                    <th class="govuk-table__header" scope="col" width="30%"> Title </th>
+                    <th class="govuk-table__header" scope="col" width="45%"> Impact </th>
+                    <th class="govuk-table__header" scope="col"  aria-sort="none" width="10%"> Outcome </th>
+                    <th class="govuk-table__header" scope="col" width="10%"> Team</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+
+                        <div class="hidden-form-hack">
+                        <form action="../performance-framework/hypothesis-0002" method="post" class="govuk-breadcrumbs__link"  value="journey-health-vision">
+                        
+                          <div class="hidden-form-hack">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input"  <input class="govuk-radios__input" id="journey-health-vision" name="journey" type="radio" value="health-vision" {{ checked("journey", "health-vision") }} checked>
+                              <label class="govuk-label govuk-radios__label" for="journey-health-vision" >
+                               Journey: health vision
+                              </label>
+                            </div>
+                            </div>
+                        </div>
+                
+                        <button class="hyperlink-hack">02</button>
+                
+                      </form>
+                
+                  
+                    </td>
+                    <td class="govuk-table__cell">
+                      Removing physical assessment from phone
+                    </td>
+                    <td class="govuk-table__cell">
+                      Removing irrelevant fields from the telephone assessment will make it shorter
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                      Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       03
+                    </td>
+                    <td class="govuk-table__cell">
+                      Ironing out confusion between abandon/curtail options
+                    </td>
+                    <td class="govuk-table__cell">
+                      Notifying the HCP as soon as LCWRA threshold is reached makes assessment shorter
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--red">
+                      Risk
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      03
+                    </td>
+                    <td class="govuk-table__cell">
+                      Ironing out confusion between abandon/curtail options
+                    </td>
+                    <td class="govuk-table__cell">
+                      HCP stops as soon as LCWRA threshold reached, DM needs to call claimant back as not enough evidence recorded
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                     Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      07
+                    </td>
+                    <td class="govuk-table__cell">
+                      Suggest the HCP can end the assessment when evidence for functional LCWRA has been found
+                    </td>
+                    <td class="govuk-table__cell">
+                      Notifying the HCP as soon as LCWRA threshold is reached makes assessment shorter
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                      Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+                  
+
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      07
+                    </td>
+                    <td class="govuk-table__cell">
+                      Suggest the HCP can end the assessment when evidence for functional LCWRA has been found
+                    </td>
+                    <td class="govuk-table__cell">
+                      HCPs can end an assessment once the threshold is reached - no unnecessary extra work
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                     Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+                  
+               
+                                                      
+            
+
+               
+
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

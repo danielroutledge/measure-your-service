@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status-royal-blue.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% include "includes/breadcrumb_team_pmf.html" %}
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+             
+
+              <h1 class="govuk-heading-xl">Performance framework</h1>
+              <p class="govuk-body-l">Team Teal have worked with Team Royal Blue to establish how their service can be measured.</p>
+              <p class="govuk-body-l">This has led to the creation of several hypotheses that Royal Blue want to test.</p>
+             
+          
+
+              <h2 class="govuk-heading-l" id="next-release">Hypotheses</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col"> # </th>
+                    <th class="govuk-table__header" scope="col"> Title </th>
+                    <th class="govuk-table__header" scope="col"> Status </th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <a href="hypothesis-0001"> 01</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      Capturing Assessment type
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                        Supported
+                      </strong>
+                    </td>
+                  </tr>
+                  
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <a href="hypothesis-0002"> 02</a>
+                    </td>
+                    <td class="govuk-table__cell">
+                      Removing physical assessment from phone
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                        Supported
+                      </strong>
+                    </td>
+                  </tr>
+                                    
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      03
+                    </td>
+                    <td class="govuk-table__cell">
+                      Ironing out confusion between abandon/curtail options
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--yellow">
+                        More support needed
+                      </strong>
+                    </td>
+                  </tr>
+                                                      
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       04
+                    </td>
+                    <td class="govuk-table__cell">
+                      Combining the “interactive” and “write up” parts of the assessment
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--yellow">
+                        More support needed
+                      </strong>
+                    </td>
+                  </tr>
+                                                      
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                     05
+                    </td>
+                    <td class="govuk-table__cell">
+                      Building a WCA assessment with no personal summary statement
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--yellow">
+                        More support needed
+                      </strong>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       06
+                    </td>
+                    <td class="govuk-table__cell">
+                      More work on duplicating typing in different areas?
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       07
+                    </td>
+                    <td class="govuk-table__cell">
+                      Suggest the HCP can end the assessment when evidence for functional LCWRA has been found
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      08
+                    </td>
+                    <td class="govuk-table__cell">
+                      Renaming 'musculoskeletal' to 'physical health' in PIP
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      09
+                    </td>
+                    <td class="govuk-table__cell">
+                      Adding a notes input on descriptor pages
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      10
+                    </td>
+                    <td class="govuk-table__cell">
+                      Order of task list
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      11
+                    </td>
+                    <td class="govuk-table__cell">
+                      Removing guidance
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                    12
+                    </td>
+                    <td class="govuk-table__cell">
+                      Medical conditions and medications list
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% include "includes/breadcrumb_select_team.html" %}
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+          
+            <div class="govuk-grid-column-two-thirds">
+
+
+
+              
+            
+
+              <form action="/mys-version-0-3/choose-team-hyp" method="post" class="form">
+
+                <h1 class="govuk-heading-xl">
+                   Which team would you like to see more information on?
+                </h1>
+        
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                 
+                  <div class="govuk-radios govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="team-royal-blue" name="team" type="radio" value="Royal Blue" {{ checked("team", "Royal Blue") }}>
+                      <label class="govuk-label govuk-radios__label" for="team-royal-blue">
+                       Royal Blue
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="team-name2" name="team" type="radio" value="team-name2">
+                      <label class="govuk-label govuk-radios__label" for="team-name2">
+                        Different team
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="team-name3" name="team" type="radio" value="team-name3">
+                      <label class="govuk-label govuk-radios__label" for="team-name3">
+                        Another team
+                      </label>
+                    </div>
+                  </div>
+                  </fieldset>
+                </div>
+        
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+        
+              </form>
+
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

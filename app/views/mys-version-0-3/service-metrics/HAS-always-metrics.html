@@ -1,0 +1,193 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% include "includes/breadcrumb_service_metrics.html" %}
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+          
+            <div class="govuk-grid-column-full">
+
+
+                <h1 class="govuk-heading-xl">
+                  Service metrics
+                </h1>
+        
+
+                <h2 class="govuk-heading-l">Completion data</h2>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Filter this data by assessment type:
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="phone" selected>By phone</option>
+                    <option value="online" >Digital service</option>
+                    <option value="all">All</option>
+                  </select>
+                </div>
+
+                <h3 class="govuk-heading-m">Assessments completed</h3>
+
+                <div class="govuk-tabs" data-module="govuk-tabs">
+                  <h2 class="govuk-tabs__title">
+                    Contents
+                  </h2>
+                  <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                      <a class="govuk-tabs__tab" href="#completed-chart">
+                        Chart
+                      </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                      <a class="govuk-tabs__tab" href="#completed-table">
+                       Table of data
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <div class="govuk-tabs__panel" id="completed-chart">
+                    <h2 class="govuk-heading-s">Chart</h2>
+                   
+                    
+                    <div class="govuk-grid-row">
+          
+                      <div class="govuk-grid-column-two-thirds">
+          
+          
+                        <p>Placeholder metric goes here</p>
+          
+                      </div>
+
+                      <div class="govuk-grid-column-one-third">
+          
+          
+                        <p>Annotation info on visual</p>
+        
+                    </div>
+                  </div>
+                
+                  </div>
+                  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed-table">
+                    <h2 class="govuk-heading-s">Table of data</h2>
+                    <p>Placeholder table of data</p>
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">Case manager</th>
+                          <th scope="col" class="govuk-table__header">Cases opened</th>
+                          <th scope="col" class="govuk-table__header">Cases closed</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">David Francis</td>
+                          <td class="govuk-table__cell">24</td>
+                          <td class="govuk-table__cell">18</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Paul Farmer</td>
+                          <td class="govuk-table__cell">16</td>
+                          <td class="govuk-table__cell">20</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Rita Patel</td>
+                          <td class="govuk-table__cell">24</td>
+                          <td class="govuk-table__cell">27</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                
+                  </div>
+                </div>
+
+
+                <h3 class="govuk-heading-m">Average time to complete</h3>
+              
+                <hr>
+
+                <h3 class="govuk-heading-l" style="padding-top:20px;">User behaviour</h3>
+                 
+                  <div class="govuk-grid-row">
+
+                    <div class="govuk-grid-column-one-third">
+                      <div class="launch-panel">
+                            <h2 class="govuk-heading-l">Errors</h2>
+                            <p>This can't be measured because we don't collect it.</p>
+                            
+                            <p><a href="data-debt" class="panel-link">See why this matters</a></p> 
+                        </div> 
+                     </div>
+            
+            
+                     <div class="govuk-grid-column-one-third">
+                      <div class="launch-panel">
+                            <h2 class="govuk-heading-l">Time outs</h2>
+                            <p>This can't be measured because we don't collect it.</p>
+                            
+                            <p><a href="data-debt" class="panel-link">See why this matters</a></p> 
+                        </div> 
+                     </div>
+            
+                   
+            
+            </div>
+            <br>
+
+                  <hr>
+
+                  <h3 class="govuk-heading-l" style="padding-top:20px;">Session data</h3>
+
+                  <div class="govuk-grid-row">
+
+                    <div class="govuk-grid-column-one-third">
+                      <div class="launch-panel">
+                            <h2 class="govuk-heading-l">Load time</h2><br>
+                            <span class="panel-data">90%</span>
+
+                            <div class="detail">
+                              <p>of pages loaded within <strong>2 seconds</strong>.</p>
+                          </div>
+                           
+                          <p><a href="#" class="panel-link">See more on load times</a></p>
+                          <div class="detail">
+                          <p class="footer-team">Data from team: Royal Blue</p>
+                          </div>
+                      </div> 
+                     </div>
+
+
+                     <div class="govuk-grid-column-one-third">
+                      <div class="launch-panel">
+                            <h2 class="govuk-heading-l">Down time</h2><br>
+                            <span class="panel-data">2%</span>
+
+                            <div class="detail">
+                              <p>of the time the service was down.</p>
+                          </div>
+                          <div class="detail" style="padding-top:60px;">
+                          <p class="footer-team">Data from team: Royal Blue</p>
+                          </div>
+                      </div> 
+                     </div>
+            
+            
+                 
+                  
+              
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

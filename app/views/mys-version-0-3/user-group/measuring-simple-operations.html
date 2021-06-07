@@ -1,0 +1,227 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% include "includes/breadcrumb_user_vision_detail.html" %}
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h1 class="govuk-heading-l">How we're measuring: Simple for Operations</h1>
+              <p class="govuk-body-l">Better re-use and more complex algorithms to assess best options.</p>
+
+              <p class="govuk-body">Each hypothesis:</p>
+              <ul class="govuk-list govuk-list--bullet">
+              
+              <li>will make an impact somewhere in the journey or service</li>
+              <li>has an outcome: <br> 
+                 -  <strong class="govuk-tag govuk-tag--green">
+                  Goal
+                  </strong> is a positive to work towards. <br>
+                  -  <strong class="govuk-tag govuk-tag--red">
+                      Risk
+                      </strong> is something to mitigate
+                  </li>
+              </ul>
+
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col" width="5%"> # </th>
+                    <th class="govuk-table__header" scope="col" width="30%"> Title </th>
+                    <th class="govuk-table__header" scope="col" width="45%"> Impact </th>
+                    <th class="govuk-table__header" scope="col"  aria-sort="none" width="10%"> Outcome </th>
+                    <th class="govuk-table__header" scope="col" width="10%"> Team</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+
+                      <div class="hidden-form-hack">
+                        <form action="../performance-framework/hypothesis-0001" method="post" class="govuk-breadcrumbs__link"  value="journey-user-vision">
+                        
+                          <div class="hidden-form-hack">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input"  <input class="govuk-radios__input" id="journey-user-vision" name="journey" type="radio" value="user-vision" {{ checked("journey", "user-vision") }} checked>
+                              <label class="govuk-label govuk-radios__label" for="journey-user-vision" >
+                               Journey: user vision
+                              </label>
+                            </div>
+                            </div>
+                        </div>
+                
+                        <button class="hyperlink-hack">01</button>
+                
+                      </form>
+                     
+                    </td>
+                    <td class="govuk-table__cell">
+                      Capturing Assessment type
+                    </td>
+                    <td class="govuk-table__cell">
+                      Assessment type field will reduce the need to record it elsewhere
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                      Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       04
+                    </td>
+                    <td class="govuk-table__cell">
+                      Combining the “interactive” and “write up” parts of the assessment
+                    </td>
+                    <td class="govuk-table__cell">
+                      Removing the need for HCPs to remember information from interactive part to complete the write up part
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                    Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       05
+                    </td>
+                    <td class="govuk-table__cell">
+                      Building a WCA assessment with no personal summary statement
+                    </td>
+                    <td class="govuk-table__cell">
+                      Removing the PSS removes repetition for HCPs entering information
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                     Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       09
+                    </td>
+                    <td class="govuk-table__cell">
+                      Adding a notes input on descriptor pages
+                    </td>
+                    <td class="govuk-table__cell">
+                      Removing the need for HCPs to remember information from interactive part to complete the write up part
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                     Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       10
+                    </td>
+                    <td class="govuk-table__cell">
+                      Order of task list
+                    </td>
+                    <td class="govuk-table__cell">
+                      Having the task list in the most common order makes it easy to work through and reflects HCP process
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                     Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      12
+                    </td>
+                    <td class="govuk-table__cell">
+                      Medical conditions and medications list
+                    </td>
+                    <td class="govuk-table__cell">
+                      Providing selectable conditions/medications allows the HCP to quickly find the right one and record correctly
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                     Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      12
+                    </td>
+                    <td class="govuk-table__cell">
+                      Medical conditions and medications list
+                    </td>
+                    <td class="govuk-table__cell">
+                      Make the service accessible, so if HCPs used assistive technology they can still do their job
+                    </td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                     Goal
+                      </strong>
+                    </td>
+
+                    <td class="govuk-table__cell">
+                     Royal Blue
+                    </td>
+                  </tr>
+
+                 
+
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

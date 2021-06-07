@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+          
+            <div class="govuk-grid-column-two-thirds">
+
+
+                <h1 class="govuk-heading-xl">
+                  Why we should measure this
+                </h1>
+        
+                <p>Information on data debt.</p>
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}
