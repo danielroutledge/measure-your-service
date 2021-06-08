@@ -26,6 +26,45 @@
 
       <h3 class="govuk-heading-m"><a href="mys-version-0-3/start-page">MYS Version 0.3</a></h3>
 
+      <!-- Date range picker snippet -->
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="form-group">
+            <div class="form-date">
+              <div class="sm-daterange-component">
+      
+                <label for="from" class="govuk-body-m sm-daterange-label from">From</label>
+                <div class="sm-daterange-input-wrapper from">
+                  <input type="text" id="from" name="from" placeholder="DD/MM/YYYY" class="form-control sm-daterange-input from" autocomplete="off">
+                  <span class="sm-calendar-icon">
+                    <i class="far fa-calendar-alt"><span class="visually-hidden">From date range</span></i>
+                  </span>
+                </div>
+      
+                <label for="to" class="govuk-body-m sm-daterange-label to">to</label>
+                <div class="sm-daterange-input-wrapper to">
+                  <input type="text" id="to" name="to" placeholder="DD/MM/YYYY" class="form-control sm-daterange-input to" autocomplete="off">
+                  <span class="sm-calendar-icon">
+                    <i class="far fa-calendar-alt"><span class="visually-hidden">To date range</span></i>
+                  </span>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+          if (document.querySelectorAll('.sm-daterange-component').length) {
+            SmDateRangePicker('#from', '#to').init();
+          }
+        });
+      </script>
+
+      <!-- End of date range picker snippet -->
+
       <hr class="govuk-!-margin-top-9 govuk-!-margin-bottom-6">
 
      <!-- Current release -->
