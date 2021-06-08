@@ -437,3 +437,36 @@ hr { height:0px; border-top:1px solid #b1b4b6; border-bottom: 0;}
 }
 
 
+.data-panel {
+    background: #fff;
+   // border: 1px solid #bfc1c3;
+    //min-height: 13em;
+    margin-bottom: 1em;
+}
+
+.data-panel p {
+    padding: 0em 1em 0.9em 0em !important;
+    margin: 0;
+    font-size: 19px;
+}
+
+
+.panel-data-figure {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 36px;
+    line-height: 1.0416666667;
+    //margin: 8px 0;
+    font-weight: bold;
+    //display: block;
+    color: #005EA5;
+    //padding-left: 0.5em;
+}
+
+.detail .footer-team-data{
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    color: #505a5f;
+    //margin-left: 0.3em;
+}
