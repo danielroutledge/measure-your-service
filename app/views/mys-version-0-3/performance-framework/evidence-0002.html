@@ -10,11 +10,11 @@
 {% include "includes/service-status-royal-blue.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
-    {% if data['team'] != 'clear' %}
+    {% if  data['find-out']   == 'find-out-hyp' %}
     <a href="royal-blue" class="govuk-back-link">Back</a>
-    {% elif data['journey'] == 'health-vision' %} 
+    {% elif data['find-out'] == 'find-out-vision' %} 
     <a href="../vision/measuring-timing" class="govuk-back-link">Back</a>
-    {% elif data['service'] == 'HAS' %} 
+    {% elif  data['find-out']  == 'find-out-metrics' %} 
     <a href="../service-metrics/HAS-always-metrics" class="govuk-back-link">Back</a>
     {% else %} 
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
