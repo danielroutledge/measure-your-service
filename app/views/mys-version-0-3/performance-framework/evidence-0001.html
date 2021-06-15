@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status-royal-blue.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% if  data['find-out']   == 'find-out-hyp' %}
+    <a href="royal-blue" class="govuk-back-link">Back</a>
+    {% elif data['find-out'] == 'find-out-vision' %} 
+    <a href="../vision/measuring-timing" class="govuk-back-link">Back</a>
+    {% elif  data['find-out']  == 'find-out-metrics' %} 
+    <a href="../service-metrics/HAS-always-metrics" class="govuk-back-link">Back</a>
+    {% else %} 
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+     {% endif %} 
+
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+
+            
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Hypothesis 1
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                    Capturing Assessment type
+                </h1>
+                <p class="govuk-body-l">
+                    <strong class="govuk-tag govuk-tag--green">
+                        Supported
+                    </strong>
+                </p>
+            </div>
+        </div>
+        
+        
+                <nav class="navigation-secondary">
+                    <ul>
+                      <li>
+                        <a href="hypothesis-0001">Overview</a>
+                      </li>
+                      <li>
+                        
+                        <a href="#" class="active" aria-current="section">Evidence</a>
+                      </li>
+                    </ul>
+                  </nav>
+
+                 
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+            
+                      <p class="govuk-body-l" style="padding-top:20px;">Evidence supporting this hypothesis:</p>
+             
+
+                      <h2 class="govuk-heading-m" id="qual">Qualitative</h2>
+                      <p>The team have observed that HCPs can easily select the assessment channel and do not need to re-enter it into subsequent text fields.</p>
+
+                     <h2 class="govuk-heading-m" id="quant">Quantitative</h2>
+                      <p> There are currently no metrics supporting this hypothesis.</p> 
+
+
+               
+
+            </div>
+        </div>
+
+
+     
+
+
+
+    </main>
+  </div>
+{% endblock %}

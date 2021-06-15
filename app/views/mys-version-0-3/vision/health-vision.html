@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+   <!--{{ govukBackLink({
+        text: "Back",
+        href: "./"
+      }) }} -->
+
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Health Programme
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                    Health vision
+                </h1>
+
+
+                <p class="govuk-body-l">
+                    The vision of the programme is that people with a health condition or disability will get the support they need.
+                </p>
+
+                <p class="govuk-body-l">
+                    In giving this support, we will provide a 
+                    <strong>simple</strong> and
+                    <strong>responsive</strong> service and make
+                    <strong>timely</strong>,
+                    <strong>accurate</strong>, and <strong>understandable</strong> decisions that help people get the right
+                    support for them.
+                </p>
+
+                <p class="govuk-body-l">
+                    There are five categories or aims, and each category has four subcategories or examples.
+                </p>
+
+            </div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full-width">
+                <table class="govuk-table vision-table">
+                    <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">
+                            <strong class="govuk-tag govuk-tag--simple2 govuk-tag--title">
+                                Simple
+                            </strong>
+                        </th>
+                        <th class="govuk-table__header" scope="col">
+                            <strong class="govuk-tag govuk-tag--responsive2 govuk-tag--title">
+                                Responsive
+                            </strong>
+                        </th>
+                        <th class="govuk-table__header" scope="col">
+                            <strong class="govuk-tag govuk-tag--timely2 govuk-tag--title">
+                                Timely
+                            </strong>
+                        </th>
+                        <th class="govuk-table__header" scope="col">
+                            <strong class="govuk-tag govuk-tag--accurate2 govuk-tag--title">
+                                Accurate
+                            </strong>
+                        </th>
+                        <th class="govuk-table__header" scope="col">
+                            <strong class="govuk-tag govuk-tag--understandable2 govuk-tag--title">
+                                Understandable
+                            </strong>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="govuk-table__body vision-example">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--simple2  no-margin-bottom">1</strong>
+                            People will find the right services to support them to maximise independence across Work and Health 
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--responsive2  no-margin-bottom">1</strong>
+                            People will know what is happening as they progress through the service
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--timely2  no-margin-bottom">1</strong>
+                            We will gather the minimum information required to make a decision at the earliest point
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--accurate2  no-margin-bottom">1</strong>
+                            We will gather the right amount of information to make sure our decisions are accurate
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--understandable2  no-margin-bottom">1</strong>
+                            Our decisions will be transparent so that people understand those decisions that have been made about them
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--simple2  no-margin-bottom">2</strong>
+                            People will only have to provide information once
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--responsive2  no-margin-bottom">2</strong>
+                            All communications with people (to or from) will use the best available channel for them
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--timely2  no-margin-bottom">2</strong>
+                            Digital channels will be available 24/7
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--accurate2  no-margin-bottom">2</strong>
+                            All communication with people (to or from) will be error free
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--understandable2  no-margin-bottom">2</strong>
+                            All communication with people (to or from) will be easily understood
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--simple2  no-margin-bottom">3</strong>
+                            People will not need to learn how to use the service to get the right outcome from it
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--responsive2  no-margin-bottom">3</strong>
+                            We will provide claimants with more visibility and control of their journey 
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--timely2  no-margin-bottom">3</strong>
+                            People will get the right decision first time around
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--accurate2  no-margin-bottom">3</strong>
+                            We will spend government money fairly and appropriately and ensure people get the money they are entitled to
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--understandable2  no-margin-bottom">3</strong>
+                            People will feel we have listened to them and fully understood what they've told us
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--simple2  no-margin-bottom">4</strong>
+                            We will ensure there are no barriers to people using the service easily
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--responsive2  no-margin-bottom">4</strong>
+                            We will tailor the service based on things we know (or find out) about people, with a focus on prevention of health related job loss
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--timely2  no-margin-bottom">4</strong>
+                            Information will be made available to those who need to see it, or update it, instantly
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--accurate2  no-margin-bottom">4</strong>
+                            We will use data to make continuous improvements to the service
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--understandable2  no-margin-bottom">4</strong>
+                            People will feel they have been treated fairly and have trust in the process
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+  </div>
+{% endblock %}
