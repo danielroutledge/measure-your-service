@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status-royal-blue.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+   
+    <a href="royal-blue" class="govuk-back-link">Back</a>
+    
+     
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Hypothesis 2
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                    Removing physical assessment from phone
+                </h1>
+                <p class="govuk-body-l">
+                    <strong class="govuk-tag govuk-tag--green">
+                        Supported
+                    </strong>
+                </p>
+            </div>
+        </div>
+
+
+        <nav class="navigation-secondary">
+            <ul>
+              <li>
+                <a href="#" class="active" aria-current="section">Overview</a>
+              </li>
+              <li>
+                <a href="evidence-0002">Evidence</a>
+              </li>
+
+              <li>
+                <a href="data-0002">Supportive data</a>
+              </li>
+
+              <li>
+                <a href="vision-0002">Vision impacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <br>
+                    <h2 class="govuk-heading-m" id="action">We believe if we...</h2>
+                    <p class="govuk-body-m">
+                        remove physical assessment options from phone interviews
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="user">for a...</h2>
+                    <p class="govuk-body-m">
+                        Healthcare Professional
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="outcome">it will mean that...</h2>
+                    <p class="govuk-body-m">
+                        they will not be prompted unnecessarily for info that isn't needed for this type of assessment.
+                    </p>
+    
+                    <h2 class="govuk-heading-m" id="test">We'll know we're right when...</h2>
+                    <p class="govuk-body-m">
+                        they can capture sufficient information despite the removal of the 'physical' section.
+                    </p>
+
+                    <h2 class="govuk-heading-m" id="test">However, this could be harmful if...</h2>
+                    <p class="govuk-body-m">
+                        a physical assessment is needed but is not available in the interface.
+                    </p>
+               
+
+
+                
+
+            </div>
+        </div>
+
+ 
+      
+
+    </main>
+  </div>
+{% endblock %}

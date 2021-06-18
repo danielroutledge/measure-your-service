@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status-royal-blue.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+  
+      <a href="royal-blue" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+
+            
+            <div class="govuk-grid-column-two-thirds">
+              <div id="passport-issued-hint" class="hypothesis-label">
+                Hypothesis 2
+            </div>
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                Removing physical assessment from phone
+            </h1>
+                <p class="govuk-body-l">
+                    <strong class="govuk-tag govuk-tag--green">
+                        Supported
+                    </strong>
+                </p>
+            </div>
+        </div>
+        
+        
+                <nav class="navigation-secondary">
+                    <ul>
+                      <li>
+                        <a href="hypothesis-0002">Overview</a>
+                      </li>
+                      <li>
+                        
+                        <a href="#" class="active" aria-current="section">Evidence</a>
+                      </li>
+
+
+                      <li>
+                        <a href="data-0002">Supportive data</a>
+                      </li>
+
+                      <li>
+                        <a href="vision-0002">Vision impacts</a>
+                      </li>
+                    </ul>
+                  </nav>
+
+                 
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+
+                      <br>
+                      <h2 class="govuk-heading-m">Evidence supporting this hypothesis</h2>
+            
+                      
+
+                      <h2 class="govuk-heading-m" id="qual">Qualitative</h2>
+                      <p>The team have observed no problems when HCPs selected 'telephone' and didn't see a physical assessment option as a result.</p>
+
+                     <h2 class="govuk-heading-m" id="quant">Quantitative</h2>
+                    
+
+                      <p>
+                        <strong class="govuk-tag govuk-tag--green">
+                            Supportive data
+                        </strong> is currently being collected on the following:
+                    </p>
+
+                    </div> </div>
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+
+          <div class="data-panel">
+            <h2 class="govuk-heading-s">Assessments complete</h2>
+                
+                <div class="detail">
+                  <p>Total asessments marked as completed by phone.</p>
+              </div>
+              <div class="detail">
+              <p class="footer-team-data">Data from team: Royal Blue</p>
+              </div>
+          </div> 
+
+          
+         </div>
+
+
+         <div class="govuk-grid-column-one-third">
+
+          <div class="data-panel">
+            <h2 class="govuk-heading-s">Average time to complete</h2>
+                
+                <div class="detail">
+                  <p>Average time to complete assessment by phone.</p>
+              </div>
+              <div class="detail">
+              <p class="footer-team-data">Data from team: Royal Blue</p>
+              </div>
+          </div> 
+
+          
+         </div>
+
+
+        </div>
+               
+
+            </div>
+        </div>
+
+
+     
+
+
+
+    </main>
+  </div>
+{% endblock %}
