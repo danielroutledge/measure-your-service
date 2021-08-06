@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/product-nav-HAS.html" %}
+<!-- {% include "includes/product-nav-RB.html" %} -->
+  <div class="govuk-width-container {{ containerClasses }}">
+    
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+     
+    
+      
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <span class="govuk-caption-xl">Performance framework</span>
+
+              <h1 class="govuk-heading-xl">HAS hypothesis</h1>
+
+
+              <h2 class="govuk-heading-s">Service summary</h2>
+
+              <p>Health assessment service (HAS) is used to complete assessments for….</p>
+
+              <p><a href="health-services-index">See where this service sits within health</a></p>
+
+
+            
+              
+             
+                <h2 class="govuk-heading-s" id="action">Teams that work on this service</h2>
+                <p class="govuk-body-m">
+                 
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li> Royal Blue</li>
+                      <li>Lime</li>
+                    </ul>
+                </p>
+
+              </div>
+            </div>
+    
+
+               
+           
+
+             
+              
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+
+              <h2 class="govuk-heading-l" id="next-release">Hypotheses</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col"> # </th>
+                    <th class="govuk-table__header" scope="col"> Title </th>
+                    <th class="govuk-table__header" scope="col">Summary </th>
+                    <th class="govuk-table__header" scope="col"> Status </th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       01
+                    </td>
+                    <td class="govuk-table__cell">
+                    <a href="hypothesis-0001"> 4 headings in justification box</a> 
+                    </td>
+                    <td class="govuk-table__cell">
+                      Which of the 4 headings from the crib sheet are being used in justification for each descriptors?
+                    </td>
+
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">
+                        Supported by data
+                      </strong>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       02
+                    </td>
+                    <td class="govuk-table__cell">
+                      Paper fields filled in
+                    </td>
+                    <td class="govuk-table__cell">
+                      If the assessment type is paper, what fields are filled in?
+                    </td>
+
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       03
+                    </td>
+                    <td class="govuk-table__cell">
+                      Repeat content
+                    </td>
+                    <td class="govuk-table__cell">
+                      Where is a user having to repeat themselves? Typing the same thing in multiple places.
+                    </td>
+
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+
+
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       04
+                    </td>
+                    <td class="govuk-table__cell">
+                      Sessions to complete
+                    </td>
+                    <td class="govuk-table__cell">
+                      How many sessions are people taking to do each assessment?
+                    </td>
+
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Not yet supported
+                      </strong>
+                    </td>
+                  </tr>
+                  
+               
+
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}
