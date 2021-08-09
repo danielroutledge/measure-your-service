@@ -7,7 +7,6 @@
 
 {% block main %}
 
-{% include "includes/service-status.html" %}
 
   <div class="govuk-width-container {{ containerClasses }}">
    
@@ -154,46 +153,33 @@
                         </span>
           
                         <span class="js-step-title"><button onclick="myFunction5()" class="app-step-nav__button app-step-nav__button--title" aria-expanded="false">
-                          Health assessment
+                          Health assessment service
                        <span class="app-step-nav__toggle-link">Hide</span></button></span>
                       </h2>
                     </div>
+
+
+                  
           
                     <div class="app-step-nav__panel js-panel" id="show-step5" >
                       <p class="app-step-nav__paragraph">Teams within this tier:</p>
-          
+
+                      <h4 class="govuk-heading-s">Royal Blue</h4>
+
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li> Design and build the assessment flow, applying a user (claimant) centred approach.</li>
+                        <li>Deliver a working assessment journey that we can learn from and iterate upon.</li>
+                        <li>Ensure the best structure that generates a report but also captures data to learn and iteration from with potential to tailor claimant journey's in the future.</li>
+                      </ul>
+                      <h4 class="govuk-heading-s">Lime</h4>
+
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>Develop an application/service which receives assessment data in a frontend "UI engine" that generates an application.</li>
+                        <li>Capabilities include UI component rendering, navigation, input validation, assessment lifecycle management, data persistence, and conditional behaviours.</li>
+                      </ul>
                     
 
-                      <table class="govuk-table">
-                       
-                        <thead class="govuk-table__head">
-                          <tr class="govuk-table__row">
-                            <th scope="col" class="govuk-table__header">Team</th>
-                            <th scope="col" class="govuk-table__header">Type</th>
-                            <th scope="col" class="govuk-table__header" width="22%">Status</th>
-                          </tr>
-                        </thead>
-                        <tbody class="govuk-table__body">
-                          <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header">Royal Blue</th>
-                            <td class="govuk-table__cell">HAS Front end</td>
-                            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
-                             ONBOARDED </strong></td>
-                          </tr>
-
-                          <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__cell">Lime</th>
-                            <td class="govuk-table__cell">HAS Components</td>
-                            <td class="govuk-table__cell">
-                              <strong class="govuk-tag govuk-tag--grey">
-                                Not yet onboarded
-                              </strong>
-
-                            </td>
-                          </tr>
-                          
-                        </tbody>
-                      </table>
+                     
                     </div>
           
                   </li>
