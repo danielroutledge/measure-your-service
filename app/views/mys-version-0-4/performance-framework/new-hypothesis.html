@@ -23,7 +23,7 @@
 
               <h1 class="govuk-heading-xl">Raise a new hypothesis</h1>
 
-              <p>Tell us more information so Teal can pick this up and get back to you with data ideas and measurables. </p>
+              <p>Tell us more information so Teal can pick this up and get back to you with data ideas and possible metrics.</p>
             <form action="new-hypothesis-check-answers" method="post" class="form">
 
               <div class="govuk-form-group">
@@ -55,7 +55,7 @@
 
               <div class="govuk-form-group">
                 <label class="govuk-label">
-                    What could be measured within the current process?
+                  What could be measured about this problem in the current process?
                   </label>
               
               
@@ -64,10 +64,10 @@
 
               <div class="govuk-form-group">
                 <label class="govuk-label">
-                 Is there any current data around this?
+                  Is there any current evidence around this problem?
                 </label>
-                <div id="sign-in-hint" class="govuk-hint">
-                 This could be existing GA or historic data or previous user research.
+                <div id="hint" class="govuk-hint">
+                  This can include UR findings or historic data
                 </div>
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                     <div class="govuk-radios__item">
@@ -108,6 +108,17 @@
               
                 <textarea class="govuk-textarea" id="jira-detail" name="jira-detail" value="{{ data['jira-detail'] }}" rows="5"></textarea>
               </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label">
+                  Point of contact and team name
+                </label>
+                <div id="contact-hint" class="govuk-hint">
+                  Someone Teal can talk to in more detail
+                </div>
+                <input class="govuk-input" id="contact" name="contact" value="{{ data['contact'] }}" type="text"></div>
+
+
 
 
               <button class="govuk-button" data-module="govuk-button">
