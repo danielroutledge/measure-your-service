@@ -1,0 +1,210 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+  
+     
+    <a href="has-pmf" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div id="passport-issued-hint" class="hypothesis-label">
+                Hypothesis 1
+            </div>
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+              4 headings in justification box
+            </h1>
+            <p class="govuk-body-l">
+                <strong class="govuk-tag govuk-tag--green">
+                    Supported by data
+                </strong>
+            </p>
+        </div>
+    </div>
+        
+        
+                <nav class="navigation-secondary">
+                    <ul>
+                      <li>
+                        <a href="hypothesis-0001">Detail</a>
+                      </li>
+
+
+                        <li>
+                        <a href="#" class="active" aria-current="section">Supportive data</a>
+                      </li>
+
+
+                    </ul>
+                  </nav>
+
+                 
+                 
+                  <div class="govuk-grid-row">
+          
+                    <div class="govuk-grid-column-full">
+                    <br>
+                  <!-- Date range picker snippet -->
+                  <h2 class="govuk-heading-s">Filter this data</h2>
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                      <div class="form-group">
+                        <div class="form-date">
+                          <div class="sm-daterange-component">
+                  
+                            <label for="from" class="govuk-body-m sm-daterange-label from">From</label>
+                            <div class="sm-daterange-input-wrapper from">
+                              <input type="text" id="from" name="from" placeholder="01/06/2021" class="form-control sm-daterange-input from" autocomplete="off" 
+                              <span class="sm-calendar-icon">
+                                <i class="far fa-calendar-alt"><span class="visually-hidden">From date range</span></i>
+                              </span>
+                            </div>
+                  
+                            <label for="to" class="govuk-body-m sm-daterange-label to">to</label>
+                            <div class="sm-daterange-input-wrapper to">
+                              <input type="text" id="to" name="to" placeholder="15/06/2021" class="form-control sm-daterange-input to" autocomplete="off">
+                              <span class="sm-calendar-icon">
+                                <i class="far fa-calendar-alt"><span class="visually-hidden">To date range</span></i>
+                              </span>
+                            </div>
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function (event) {
+                      if (document.querySelectorAll('.sm-daterange-component').length) {
+                        SmDateRangePicker('#from', '#to').init();
+                      }
+                    });
+                  </script>
+
+  <!-- End of date range picker snippet -->
+
+
+          <!--  <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Filter this data by assessment type:
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="phone" selected>By phone</option>
+                <option value="online" >Digital service</option>
+                <option value="all">All</option>
+              </select>
+            </div>--> 
+
+            <h3 class="govuk-heading-m">Metric 1</h3>
+<!-- start of chart and table tab area for assessment completed-->
+            <div class="govuk-tabs" data-module="govuk-tabs">
+              <h2 class="govuk-tabs__title">
+                Contents
+              </h2>
+              <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                  <a class="govuk-tabs__tab" href="#phone-completed-chart">
+                    Chart
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                  <a class="govuk-tabs__tab" href="#phone-completed-table">
+                   Table of data
+                  </a>
+                </li>
+                
+              </ul>
+              <div class="govuk-tabs__panel" id="phone-completed-chart">
+                
+                <div class="govuk-grid-row">
+      
+                  <div class="govuk-grid-column-two-thirds">
+      
+
+                    <img src="/public/images/v03-phone-assessments-complete.png" width="100%" >
+      
+                  </div>
+
+                  <div class="govuk-grid-column-one-third">
+                    <h4 class="govuk-heading-s">Metric 1 heading</h4>
+    
+                    <p><span class="govuk-body govuk-!-font-weight-bold">x selected</span> for information on metric 1 mock up.
+
+
+                    </p>
+
+                  
+    
+                </div>
+              </div>
+            
+              </div>
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="phone-completed-table">
+              
+               
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Date</th>
+                      <th scope="col" class="govuk-table__header">Assessments completed by phone</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Tue 01 Jun 2021</td>
+                      <td class="govuk-table__cell">496</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Wed 02 Jun 2021</td>
+                      <td class="govuk-table__cell">543</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Thu 03 Jun 2021</td>
+                      <td class="govuk-table__cell">610</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Fri 04 Jun 2021</td>
+                      <td class="govuk-table__cell">613</td>
+                    </tr>
+
+                 
+                    </tr>
+
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__header">Total</td>
+                      <td class="govuk-table__header">11,250</td>
+                    </tr>
+                  </tbody>
+                </table>
+            
+              </div>
+            </div>
+
+            <!--end of assessment completed area-->
+
+
+
+            </div>
+        </div>
+
+
+     
+
+
+
+    </main>
+  </div>
+{% endblock %}

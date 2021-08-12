@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+          
+            <div class="govuk-grid-column-two-thirds">
+
+
+                <h1 class="govuk-heading-xl">
+                  Why this should be measured
+                </h1>
+                <p>This metric is frequently used to make improvements to a service and is therfore a data debt. </p>
+        
+                <p>The department's strategic ambitions rely heavily on use of data and improving our data capability.</p>
+
+                <p>Our services should be designed and developed without creating problems for the future. Minimising data debt brings better opportunities to improve services and decision making.
+                </p>
+
+               
+
+                <h2 class="govuk-heading-m">
+                  Minimising data related debt
+
+                </h1>
+                <p>Debt, in a digital sense, is the cost of design or development approaches that aren’t strategic. These choices or priorities may give short term value but aren’t sustainable in the long term.</p>
+
+                <p>Debt should be a conscious choice, with a plan to repay as soon as possible to avoid paying too much interest.</p>
+
+                <p>Everyone should see data as a priority to support design and decision making at all stages.</p>
+
+                <p>By raising data as a priority your service will be better framed to measure success.</p>
+
+                <p>Your team should find out why this isn't currently measured.</p>
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+  <div class="govuk-width-container {{ containerClasses }}">
+   
+   
+    <a href="has-pmf" class="govuk-back-link">Back</a>
+    
+     
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Hypothesis 1
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                  4 headings in justification box
+                </h1>
+                <p class="govuk-body-l">
+                    <strong class="govuk-tag govuk-tag--green">
+                        Supported by data
+                    </strong>
+                </p>
+            </div>
+        </div>
+
+
+        <nav class="navigation-secondary">
+            <ul>
+              <li>
+                <a href="#" class="active" aria-current="section">Detail</a>
+              </li>
+             
+
+              <li>
+                <a href="data-0001">Supportive data</a>
+              </li>
+
+           
+            </ul>
+          </nav>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <br>
+                    <h2 class="govuk-heading-m" >Detail</h2>
+                    <p class="govuk-body-m">
+                      During User Research, we have identified when HCP’s are handling PIP applications they are providing recommendations against each activity by copying and pasting a choice of 4 headings into the text box.
+                    </p>
+
+                    <p>The HCPs are given four sentences to copy from a crib sheet and use as headers.  </p>
+    
+                    <p class="govuk-body">These 4 headers are:</p>
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>Restrictions reported:</li>
+                        <li>Recommendation and evidence used to support:</li>
+                        <li>Reasons why the reported restrictions are not supported by evidence (where applicable):</li>
+                        <li>Other descriptors supported by some evidence and the reasons why they haven’t been advised (where applicable):</li>
+                      </ul>
+                   
+                      
+
+                      <p>This is being used as a guide as all HCP’s are new to completing PIP assessments.</p>
+
+                      <h2 class="govuk-heading-s" >The team want to find out: </h2>
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>Which of the 4 headings from the crib sheet are being used in justification for each descriptors?</li>
+                        <li>Is the first header largely just repetition of the notes?</li>
+                        <li>Do they use specific combinations? (eg if number 3 never number 4)</li>
+                      </ul>
+
+                
+
+                     
+            </div>
+        </div>
+
+ 
+      
+
+    </main>
+  </div>
+{% endblock %}

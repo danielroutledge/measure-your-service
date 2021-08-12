@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+<!-- {% include "includes/product-nav-RB.html" %} -->
+  <div class="govuk-width-container {{ containerClasses }}">
+    
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+     
+    
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+             <!-- <span class="govuk-caption-xl">Performance framework</span>--> 
+
+
+
+              <h1 class="govuk-heading-xl">Raise a new hypothesis</h1>
+
+              <p>Tell us more information so Teal can pick this up and get back to you with data ideas and measurables. </p>
+            <form action="new-hypothesis-check-answers" method="post" class="form">
+
+              <div class="govuk-form-group">
+              <label class="govuk-label">
+                    What is the current problem?
+                  </label>
+               
+               
+                <textarea class="govuk-textarea" id="current-problem" name="current-problem" value="{{ data['current-problem'] }}" rows="5"></textarea>
+              </div>
+              
+
+              <div class="govuk-form-group">
+                <label class="govuk-label">
+                  Who does this problem affect?
+                </label>
+                <input class="govuk-input" id="problem-affects" name="problem-affects" value="{{ data['problem-affects'] }}" type="text"></div>
+
+
+              <div class="govuk-form-group">
+                <label class="govuk-label">
+                    What would improve the problem?
+                  </label>
+             
+              
+                <textarea class="govuk-textarea" id="improve-problem" name="improve-problem" value="{{ data['improve-problem'] }}" rows="5"></textarea>
+              </div>
+
+
+              <div class="govuk-form-group">
+                <label class="govuk-label">
+                    What could be measured within the current process?
+                  </label>
+              
+              
+                <textarea class="govuk-textarea" id="could-measure" name="could-measure" value="{{ data['could-measure'] }}" rows="5"></textarea>
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label">
+                 Is there any current data around this?
+                </label>
+                <div id="sign-in-hint" class="govuk-hint">
+                 This could be existing GA or historic data or previous user research.
+                </div>
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="data-yes" name="data" type="radio" value="Yes" {{ checked("data", "Yes") }} data-aria-controls="conditional-data">
+                      <label class="govuk-label govuk-radios__label" for="data">
+                      Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-data">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="data-yes">
+                          Please provide more detail:
+                        </label>
+                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" value="{{ data['more-detail'] }}" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+                      </div>
+              
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="data-no" name="data" type="radio" value="No" {{ checked("data", "No") }} data-aria-controls="data-no">
+                      <label class="govuk-label govuk-radios__label" for="data-no">
+                        No
+                      </label>
+                    </div>
+                  
+                   
+                  </div>
+              
+                </fieldset>
+              </div>
+
+
+              <div class="govuk-form-group">
+                <label class="govuk-label">
+                    Please provide any Jira tickets that may relate to this problem:
+                  </label>
+              
+              
+                <textarea class="govuk-textarea" id="jira-detail" name="jira-detail" value="{{ data['jira-detail'] }}" rows="5"></textarea>
+              </div>
+
+
+              <button class="govuk-button" data-module="govuk-button">
+               Continue
+              </button>
+            </form>
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% include "includes/breadcrumb_select_service.html" %}
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+          
+            <div class="govuk-grid-column-two-thirds">
+
+
+
+              
+            
+
+              <form action="/mys-version-0-3/service-metrics/choose-service" method="post" class="form">
+
+                <h1 class="govuk-heading-xl">
+                  Which service's metrics? 
+                </h1>
+        
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                 
+                  <div class="govuk-radios govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="service-HAS" name="service" type="radio" value="HAS">
+                      <label class="govuk-label govuk-radios__label" for="service-HAS">
+                        Health Assessment Service
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="service-name2" name="service" type="radio" value="service-name2">
+                      <label class="govuk-label govuk-radios__label" for="service-name2">
+                        PIP
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="service-name3" name="service" type="radio" value="service-name3">
+                      <label class="govuk-label govuk-radios__label" for="service-name3">
+                        Another service
+                      </label>
+                    </div>
+                  </div>
+                  </fieldset>
+                </div>
+        
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+        
+              </form>
+
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Raising new hypothesis complete
+          </h1>
+          <div class="govuk-panel__body">
+            Your ticket number number<br><strong>HA-3405</strong>
+          </div>
+        </div>
+
+       
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+        <p class="govuk-body">
+         This will go into Teal's backlog to be picked up by a Performance Analyst to get back to your team to work with you on what data improvements could be made to help this problem.
+        </p>
+        <p class="govuk-body">
+          They will contact you for more information.
+        </p>
+
+        <p class="govuk-body">
+          <a href="has-pmf" class="govuk-link">Back to your current hypotheses</a> 
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+
+    </main>
+  </div>
+{% endblock %}

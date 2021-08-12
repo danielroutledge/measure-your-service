@@ -1,0 +1,403 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+{% include "includes/service-status.html" %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% include "includes/breadcrumb_service_metrics.html" %}
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+          
+            <div class="govuk-grid-column-full">
+
+
+                <h1 class="govuk-heading-xl">
+                  Service metrics
+                </h1>
+        
+
+                  <!-- Date range picker snippet -->
+                  <h2 class="govuk-heading-s">Filter this data</h2>
+                      <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                          <div class="form-group">
+                            <div class="form-date">
+                              <div class="sm-daterange-component">
+                      
+                                <label for="from" class="govuk-body-m sm-daterange-label from">From</label>
+                                <div class="sm-daterange-input-wrapper from">
+                                  <input type="text" id="from" name="from" placeholder="01/06/2021" class="form-control sm-daterange-input from" autocomplete="off" 
+                                  <span class="sm-calendar-icon">
+                                    <i class="far fa-calendar-alt"><span class="visually-hidden">From date range</span></i>
+                                  </span>
+                                </div>
+                      
+                                <label for="to" class="govuk-body-m sm-daterange-label to">to</label>
+                                <div class="sm-daterange-input-wrapper to">
+                                  <input type="text" id="to" name="to" placeholder="15/06/2021" class="form-control sm-daterange-input to" autocomplete="off">
+                                  <span class="sm-calendar-icon">
+                                    <i class="far fa-calendar-alt"><span class="visually-hidden">To date range</span></i>
+                                  </span>
+                                </div>
+                      
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <script>
+                        document.addEventListener("DOMContentLoaded", function (event) {
+                          if (document.querySelectorAll('.sm-daterange-component').length) {
+                            SmDateRangePicker('#from', '#to').init();
+                          }
+                        });
+                      </script>
+
+      <!-- End of date range picker snippet -->
+
+                <h2 class="govuk-heading-l">Completion data</h2>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Filter this data by assessment type:
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="phone" selected>By phone</option>
+                    <option value="online" >Digital service</option>
+                    <option value="all">All</option>
+                  </select>
+                </div>
+
+                <h3 class="govuk-heading-m">Assessments completed</h3>
+<!-- start of chart and table tab area for assessment completed-->
+                <div class="govuk-tabs" data-module="govuk-tabs">
+                  <h2 class="govuk-tabs__title">
+                    Contents
+                  </h2>
+                  <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                      <a class="govuk-tabs__tab" href="#phone-completed-chart">
+                        Chart
+                      </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                      <a class="govuk-tabs__tab" href="#phone-completed-table">
+                       Table of data
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <div class="govuk-tabs__panel" id="phone-completed-chart">
+                    
+                    <div class="govuk-grid-row">
+          
+                      <div class="govuk-grid-column-two-thirds">
+          
+
+                        <img src="/public/images/v03-phone-assessments-complete.png" width="100%" >
+          
+                      </div>
+
+                      <div class="govuk-grid-column-one-third">
+                        <h4 class="govuk-heading-s">01 June to 15 June 2021</h4>
+        
+                        <p><span class="govuk-body govuk-!-font-weight-bold">11,250 </span> total assessments completed by phone.
+
+
+                          <h4 class="govuk-heading-s">Selected day</h4>
+        
+                          <p><span class="govuk-body govuk-!-font-weight-bold">500 </span> assessments completed by phone on <span class="govuk-body govuk-!-font-weight-bold">Tuesday 15 June</span>.
+  
+
+
+                        </p>
+
+                        <strong class="govuk-tag govuk-tag--green">
+                          Supportive data
+                        </strong> 
+                        <p>This data is <a href="../performance-framework/evidence-0002">currently supporting one of Royal Blue's hypotheses</a>.</p>
+
+                        <p class="footer-team">Data from team: Royal Blue</p>
+        
+                    </div>
+                  </div>
+                
+                  </div>
+                  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="phone-completed-table">
+                  
+                   
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">Date</th>
+                          <th scope="col" class="govuk-table__header">Assessments completed by phone</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Tue 01 Jun 2021</td>
+                          <td class="govuk-table__cell">496</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Wed 02 Jun 2021</td>
+                          <td class="govuk-table__cell">543</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Thu 03 Jun 2021</td>
+                          <td class="govuk-table__cell">610</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Fri 04 Jun 2021</td>
+                          <td class="govuk-table__cell">613</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Sat 05 Jun 2021</td>
+                          <td class="govuk-table__cell">10</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Sun 06 Jun 2021</td>
+                          <td class="govuk-table__cell">11</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Mon 07 Jun 2021</td>
+                          <td class="govuk-table__cell">769</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Tue 08 Jun 2021</td>
+                          <td class="govuk-table__cell">1,000</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Wed 09 Jun 2021</td>
+                          <td class="govuk-table__cell">901</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Thu 10 Jun 2021</td>
+                          <td class="govuk-table__cell">812</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Fri 11 Jun 2021</td>
+                          <td class="govuk-table__cell">970</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Sat 12 Jun 2021</td>
+                          <td class="govuk-table__cell">24</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Sun 13 Jun 2021</td>
+                          <td class="govuk-table__cell">14</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Mon 14 Jun 2021</td>
+                          <td class="govuk-table__cell">750</td>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Tue 15 Jun 2021</td>
+                          <td class="govuk-table__cell">500</td>
+                        </tr>
+
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__header">Total</td>
+                          <td class="govuk-table__header">11,250</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                
+                  </div>
+                </div>
+
+                <!--end of assessment completed area-->
+
+
+                <h3 class="govuk-heading-m">Average time to complete</h3>
+
+
+<!-- start of chart and table tab area for average time to coomplet-->
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#phone-average-time-completed-chart">
+        Chart
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#phone-average-time-ompleted-table">
+       Table of data
+      </a>
+    </li>
+    
+  </ul>
+  <div class="govuk-tabs__panel" id="phone-average-time-completed-chart">
+    
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <img src="/public/images/v03-phone-average-time-complete.png" width="100%" >
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h4 class="govuk-heading-s">01 June to 15 June 2021</h4>
+
+        <p><span class="govuk-body govuk-!-font-weight-bold">70% </span> of assessments were completed <span class="govuk-body govuk-!-font-weight-bold">within 1 hour 30 minutes </span> by phone.</p> 
+
+
+         
+        <strong class="govuk-tag govuk-tag--green">
+          Supportive data
+        </strong> 
+        <p>This data is <a href="../performance-framework/evidence-0002">currently supporting one of Royal Blue's hypotheses</a>.</p>
+
+        <p class="footer-team">Data from team: Royal Blue</p>
+
+    </div>
+  </div>
+
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="phone-average-time-ompleted-table">
+  
+   
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Average time</th>
+          <th scope="col" class="govuk-table__header">Percentage of assessments completed by phone</th>
+          
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Less than 1 hour</td>
+          <td class="govuk-table__cell">15%</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Between 1 hour - 1 hour 30 minutes</td>
+          <td class="govuk-table__cell">70%</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Between 1 hour 30 minutes - 2 hours</td>
+          <td class="govuk-table__cell">11%</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Over 2 hours</td>
+          <td class="govuk-table__cell">4%</td>
+        </tr>
+
+        
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<!--end of average time to complete area-->
+              
+                <hr>
+
+                <h3 class="govuk-heading-l" style="padding-top:20px;">User behaviour</h3>
+                 
+                  <div class="govuk-grid-row">
+
+                    <div class="govuk-grid-column-one-third">
+                      <div class="launch-panel">
+                            <h2 class="govuk-heading-l">Errors</h2>
+                            <p>This can't be measured because we don't collect it.</p>
+                            
+                            <p><a href="data-debt" class="panel-link">See why this matters</a></p> 
+                        </div> 
+                     </div>
+            
+            
+                     <div class="govuk-grid-column-one-third">
+                      <div class="launch-panel">
+                            <h2 class="govuk-heading-l">Time outs</h2>
+                            <p>This can't be measured because we don't collect it.</p>
+                            
+                            <p><a href="data-debt" class="panel-link">See why this matters</a></p> 
+                        </div> 
+                     </div>
+            
+                   
+            
+            </div>
+            <br>
+
+                  <hr>
+
+                  <h3 class="govuk-heading-l" style="padding-top:20px;">Session data</h3>
+
+                  <div class="govuk-grid-row">
+
+                    <div class="govuk-grid-column-one-third">
+                      <div class="launch-panel">
+                            <h2 class="govuk-heading-l">Load time</h2><br>
+                            <span class="panel-data">90%</span>
+
+                            <div class="detail">
+                              <p>of pages loaded within <span class="govuk-body govuk-!-font-weight-bold">2 seconds</span>.</p>
+                          </div>
+                           
+                          <p><a href="load-times" class="panel-link">See more on load times</a></p>
+                          <div class="detail">
+                          <p class="footer-team">Data from team: Royal Blue</p>
+                          </div>
+                      </div> 
+                     </div>
+
+
+                     <div class="govuk-grid-column-one-third">
+                      <div class="launch-panel">
+                            <h2 class="govuk-heading-l">Down time</h2><br>
+                            <span class="panel-data">2%</span>
+
+                            <div class="detail">
+                              <p>of the time the service was unavailable or offline.</p>
+                          </div>
+                          <div class="detail" style="padding-top:60px;">
+                          <p class="footer-team">Data from team: Royal Blue</p>
+                          </div>
+                      </div> 
+                     </div>
+            
+            
+                 
+                  
+              
+
+            </div>
+        </div>
+
+    </main>
+  </div>
+{% endblock %}
