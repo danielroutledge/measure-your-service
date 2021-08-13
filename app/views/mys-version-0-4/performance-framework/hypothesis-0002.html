@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+  <div class="govuk-width-container {{ containerClasses }}">
+   
+   
+    <a href="has-pmf" class="govuk-back-link">Back</a>
+    
+     
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Hypothesis 2
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                  Paper assessment fields completed
+                </h1>
+                <p class="govuk-body-l">
+                    <strong class="govuk-tag govuk-tag--green">
+                        Supported by data
+                    </strong>
+                </p>
+            </div>
+        </div>
+
+
+        <nav class="navigation-secondary">
+            <ul>
+              <li>
+                <a href="#" class="active" aria-current="section">Detail</a>
+              </li>
+             
+
+              <li>
+                <a href="data-0002">Supportive data</a>
+              </li>
+
+           
+            </ul>
+          </nav>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <br>
+                    <h2 class="govuk-heading-m" >Detail</h2>
+                    <p class="govuk-body-m">
+                      We need to investigate how we can present a 'paper based journey' in the PIP Assessment service and the Work Capability Assessment. 
+                      
+                      <p> We only want to show the nesessary inputs fields for this type of assessment when HCP's use this service to provide recommendations to DWP.</p>
+                      
+
+                    </p>
+
+              
+
+                      <h2 class="govuk-heading-s" >The team want to find out: </h2>
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>When a HCP completes an assessment by paper what fields are filled in?</li>
+                        
+                      </ul>
+
+                
+
+                     
+            </div>
+        </div>
+
+ 
+      
+
+    </main>
+  </div>
+{% endblock %}

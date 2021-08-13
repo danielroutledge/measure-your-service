@@ -1,0 +1,545 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+  <div class="govuk-width-container {{ containerClasses }}">
+  
+     
+    <a href="has-pmf" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div id="passport-issued-hint" class="hypothesis-label">
+                Hypothesis 2
+            </div>
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+              Paper assessment fields completed
+            </h1>
+            <p class="govuk-body-l">
+                <strong class="govuk-tag govuk-tag--green">
+                    Supported by data
+                </strong>
+            </p>
+        </div>
+    </div>
+        
+        
+                <nav class="navigation-secondary">
+                    <ul>
+                      <li>
+                        <a href="hypothesis-0002">Detail</a>
+                      </li>
+
+
+                        <li>
+                        <a href="#" class="active" aria-current="section">Supportive data</a>
+                      </li>
+
+
+                    </ul>
+                  </nav>
+
+                 
+                 
+                  <div class="govuk-grid-row">
+          
+                    <div class="govuk-grid-column-full">
+                    <br>
+                  <!-- Date range picker snippet -->
+                  <h2 class="govuk-heading-s">Filter this data</h2>
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                      <div class="form-group">
+                        <div class="form-date">
+                          <div class="sm-daterange-component">
+                  
+                            <label for="from" class="govuk-body-m sm-daterange-label from">From</label>
+                            <div class="sm-daterange-input-wrapper from">
+                              <input type="text" id="from" name="from" placeholder="01/08/2021" class="form-control sm-daterange-input from" autocomplete="off" 
+                              <span class="sm-calendar-icon">
+                                <i class="far fa-calendar-alt"><span class="visually-hidden">From date range</span></i>
+                              </span>
+                            </div>
+                  
+                            <label for="to" class="govuk-body-m sm-daterange-label to">to</label>
+                            <div class="sm-daterange-input-wrapper to">
+                              <input type="text" id="to" name="to" placeholder="13/08/2021" class="form-control sm-daterange-input to" autocomplete="off">
+                              <span class="sm-calendar-icon">
+                                <i class="far fa-calendar-alt"><span class="visually-hidden">To date range</span></i>
+                              </span>
+                            </div>
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function (event) {
+                      if (document.querySelectorAll('.sm-daterange-component').length) {
+                        SmDateRangePicker('#from', '#to').init();
+                      }
+                    });
+                  </script>
+
+  <!-- End of date range picker snippet -->
+
+
+          <!--  <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Filter this data by assessment type:
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="phone" selected>By phone</option>
+                <option value="online" >Digital service</option>
+                <option value="all">All</option>
+              </select>
+            </div>--> 
+
+            <h3 class="govuk-heading-m">Fields completed by paper assessment</h3>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Compare paper assessment data to:
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="face to face" selected>Face to face assesments</option>
+                <option value="telephone" >Telephone assessments</option>
+                <option value="video call">Video call assessments</option>
+              </select>
+            </div>
+<!-- start of chart and table tab area 1-->
+            <div class="govuk-tabs" data-module="govuk-tabs">
+              <h2 class="govuk-tabs__title">
+                Contents
+              </h2>
+              <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                  <a class="govuk-tabs__tab" href="#paper-vs-face-chart">
+                    Chart
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                  <a class="govuk-tabs__tab" href="#paper-vs-face-table">
+                   Table of data
+                  </a>
+                </li>
+                
+              </ul>
+              <div class="govuk-tabs__panel" id="paper-vs-face-chart">
+                
+                <div class="govuk-grid-row">
+      
+                  <div class="govuk-grid-column-two-thirds">
+      
+                    <p>
+                      <span class="dot-paper"></span>  <span class="legend-label">Paper assessments</span> <br>
+  
+                      <span class="dot-face"></span>  <span class="legend-label">Face to face assessments</span>
+                    </p>
+                    <img src="/public/images/v04-hypoth-02-paper-vs-face.png" width="100%" >
+      
+                  </div>
+
+                  <div class="govuk-grid-column-one-third">
+
+                   
+                    
+                    <h4 class="govuk-heading-s" style="padding-top: 90px;">Additional attendees</h4>
+    
+                    <p><span class="special-stat">Paper assessments</span>  complete this field <span class="special-stat">12%</span>  of the time.
+
+
+                    </p>
+
+                    <p><span class="special-stat2">Face to face assessments </span>  complete this field <span class="special-stat2">90%</span>  of the time.
+
+
+                  
+    
+                </div>
+              </div>
+            
+              </div>
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="paper-vs-face-table">
+              
+               
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Assessment field</th>
+                      <th scope="col" class="govuk-table__header">Percentage competion for paper assessments</th>
+                      <th scope="col" class="govuk-table__header">Percentage competion for face to face assessments</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Additional attendees</td>
+                      <td class="govuk-table__cell">12%</td>
+                      <td class="govuk-table__cell">90%</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Evidence</td>
+                      <td class="govuk-table__cell">20%</td>
+                      <td class="govuk-table__cell">35%</td>
+
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">History of condition</td>
+                      <td class="govuk-table__cell">15%</td>
+                      <td class="govuk-table__cell"> 30% </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Current medication or treatment</td>
+                      <td class="govuk-table__cell">25%</td>
+                      <td class="govuk-table__cell">  29%</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Social and occupational history</td>
+                      <td class="govuk-table__cell">18%</td>
+                      <td class="govuk-table__cell"> 22%</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Preparing food</td>
+                      <td class="govuk-table__cell">50%</td>
+                      <td class="govuk-table__cell"> 65% </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Taking nutrition</td>
+                      <td class="govuk-table__cell">9%</td>
+                      <td class="govuk-table__cell">  18%</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Managing therapy</td>
+                      <td class="govuk-table__cell">20%</td>
+                      <td class="govuk-table__cell"> 76% </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Washing and bathing</td>
+                      <td class="govuk-table__cell">26%</td>
+                      <td class="govuk-table__cell"> 70% </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Managing toilet needs</td>
+                      <td class="govuk-table__cell">10%</td>
+                      <td class="govuk-table__cell"> 32% </td>
+                    </tr>
+
+                    
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Dressing and undressing</td>
+                      <td class="govuk-table__cell">24%</td>
+                      <td class="govuk-table__cell"> 24% </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Communicating verbally</td>
+                      <td class="govuk-table__cell">4%</td>
+                      <td class="govuk-table__cell"> 98% </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Reading and understanding signs, symbols and words</td>
+                      <td class="govuk-table__cell">17%</td>
+                      <td class="govuk-table__cell"> 27% </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Engaging face to face</td>
+                      <td class="govuk-table__cell">2%</td>
+                      <td class="govuk-table__cell"> 77% </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Budgeting</td>
+                      <td class="govuk-table__cell">15%</td>
+                      <td class="govuk-table__cell"> 20% </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Planning and following journeys</td>
+                      <td class="govuk-table__cell">20%</td>
+                      <td class="govuk-table__cell">76%</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Moving around</td>
+                      <td class="govuk-table__cell">66%</td>
+                      <td class="govuk-table__cell">76%</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Physical health</td>
+                      <td class="govuk-table__cell">9%</td>
+                      <td class="govuk-table__cell">89%</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Mental state</td>
+                      <td class="govuk-table__cell">21%</td>
+                      <td class="govuk-table__cell">60%</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Observations</td>
+                      <td class="govuk-table__cell">4%</td>
+                      <td class="govuk-table__cell">80%</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Variability</td>
+                      <td class="govuk-table__cell">1%</td>
+                      <td class="govuk-table__cell">25%</td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+            
+              </div>
+            </div>
+
+            <!--end of area1 -->
+
+
+
+<!-- start of chart and table tab area 2-->
+
+            <h3 class="govuk-heading-m">Average word count by field</h3>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Compare paper assessment data to:
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="face to face" selected>Face to face assesments</option>
+                <option value="telephone" >Telephone assessments</option>
+                <option value="video call">Video call assessments</option>
+              </select>
+            </div>
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+              <h2 class="govuk-tabs__title">
+                Contents
+              </h2>
+              <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                  <a class="govuk-tabs__tab" href="#average-word-count-chart">
+                    Chart
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                  <a class="govuk-tabs__tab" href="#average-word-count-table">
+                   Table of data
+                  </a>
+                </li>
+                
+              </ul>
+              <div class="govuk-tabs__panel" id="average-word-count-chart">
+                
+                <div class="govuk-grid-row">
+      
+                  <div class="govuk-grid-column-two-thirds">
+                    <p>
+                      <span class="dot-paper"></span>  <span class="legend-label">Paper assessments</span> <br>
+  
+                      <span class="dot-face"></span>  <span class="legend-label">Face to face assessments</span>
+                    </p>
+
+                    <img src="/public/images/v04-hypoth-02-paper-word-count.png" width="100%" >
+      
+                  </div>
+
+                  <div class="govuk-grid-column-one-third">
+
+                    
+                    
+                    <h4 class="govuk-heading-s" style="padding-top: 90px;">Additional attendees</h4>
+    
+                    <p>Average word count for this field by <span class="special-stat">paper assessments</span> is <span class="special-stat">5 words</span>.
+
+
+                    </p>
+
+                    <p>Average word count for this field by <span class="special-stat2">face to face assessments </span> is <span class="special-stat2">20 words</span> .
+
+
+                  
+    
+                </div>
+              </div>
+            
+              </div>
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="average-word-count-table">
+              
+               
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Assessment field</th>
+                      <th scope="col" class="govuk-table__header">Average word count for paper assessments</th>
+                      <th scope="col" class="govuk-table__header">Average word count for face to face assessments</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Additional attendees</td>
+                      <td class="govuk-table__cell">5</td>
+                      <td class="govuk-table__cell">20</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Evidence</td>
+                      <td class="govuk-table__cell">19</td>
+                      <td class="govuk-table__cell">60</td>
+
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">History of condition</td>
+                      <td class="govuk-table__cell">25</td>
+                      <td class="govuk-table__cell"> 98 </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Current medication or treatment</td>
+                      <td class="govuk-table__cell">30</td>
+                      <td class="govuk-table__cell">  73</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Social and occupational history</td>
+                      <td class="govuk-table__cell">19</td>
+                      <td class="govuk-table__cell"> 22</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Preparing food</td>
+                      <td class="govuk-table__cell">50</td>
+                      <td class="govuk-table__cell"> 65</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Taking nutrition</td>
+                      <td class="govuk-table__cell">19</td>
+                      <td class="govuk-table__cell">  28</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Managing therapy</td>
+                      <td class="govuk-table__cell">20</td>
+                      <td class="govuk-table__cell"> 25 </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Washing and bathing</td>
+                      <td class="govuk-table__cell">15</td>
+                      <td class="govuk-table__cell"> 45 </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Managing toilet needs</td>
+                      <td class="govuk-table__cell">10</td>
+                      <td class="govuk-table__cell"> 19 </td>
+                    </tr>
+
+                    
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Dressing and undressing</td>
+                      <td class="govuk-table__cell">20</td>
+                      <td class="govuk-table__cell"> 24 </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Communicating verbally</td>
+                      <td class="govuk-table__cell">9</td>
+                      <td class="govuk-table__cell"> 40 </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Reading and understanding signs, symbols and words</td>
+                      <td class="govuk-table__cell">10</td>
+                      <td class="govuk-table__cell"> 17 </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Engaging face to face</td>
+                      <td class="govuk-table__cell">20</td>
+                      <td class="govuk-table__cell"> 25 </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Budgeting</td>
+                      <td class="govuk-table__cell">10</td>
+                      <td class="govuk-table__cell"> 30 </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Planning and following journeys</td>
+                      <td class="govuk-table__cell">4</td>
+                      <td class="govuk-table__cell">18</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Moving around</td>
+                      <td class="govuk-table__cell">3</td>
+                      <td class="govuk-table__cell">40</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Physical health</td>
+                      <td class="govuk-table__cell">11</td>
+                      <td class="govuk-table__cell">69</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Mental state</td>
+                      <td class="govuk-table__cell">9</td>
+                      <td class="govuk-table__cell">20</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Observations</td>
+                      <td class="govuk-table__cell">3</td>
+                      <td class="govuk-table__cell">70</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Variability</td>
+                      <td class="govuk-table__cell">3</td>
+                      <td class="govuk-table__cell">25</td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+            
+              </div>
+            </div>
+
+            <!--end of area2 -->
+
+
+
+
+            </div>
+        </div>
+
+
+     
+
+
+
+    </main>
+  </div>
+{% endblock %}

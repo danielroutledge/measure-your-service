@@ -555,3 +555,45 @@ hr { height:0px; border-top:1px solid #b1b4b6; border-bottom: 0;}
   }
   
          
+  .special-stat {
+    line-height: 1.0416666667;
+    padding-top: 6px;
+    display: block;
+    color: #097F96;
+    font-size:1.1875rem;
+    display:inline;
+    font-weight: bold;
+  }
+
+  .special-stat2 {
+    line-height: 1.0416666667;
+    padding-top: 6px;
+    display: block;
+    color: #005EA5;
+    font-size:1.1875rem;
+    display:inline;
+    font-weight: bold;
+  }
+
+  .dot-paper {
+    height: 25px;
+    width: 25px;
+    background-color: #097F96;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .dot-face {
+    height: 25px;
+    width: 25px;
+    background-color: #005EA5;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .legend-label {
+    padding-bottom:2px;
+    vertical-align: top;
+  }
