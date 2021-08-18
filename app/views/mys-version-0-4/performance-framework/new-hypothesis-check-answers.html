@@ -13,10 +13,24 @@ Check your answers
       </h1>
 
       <h2 class="govuk-heading-m">
-       Hypothethis details
+       Hypothesis details
       </h2>
       
       <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-third">
+            Hypothesis title
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['hyp-title'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="new-hypothesis">
+              Change
+            </a>
+          </dd> 
+        </div>
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-third">
             What is the current problem?
