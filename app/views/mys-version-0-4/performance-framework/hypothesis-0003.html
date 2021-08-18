@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+  <div class="govuk-width-container {{ containerClasses }}">
+   
+   
+    <a href="has-pmf" class="govuk-back-link">Back</a>
+    
+     
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Hypothesis 3
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                  Repeat content
+                </h1>
+                <p class="govuk-body-l">
+                    <strong class="govuk-tag govuk-tag--yellow">
+                      Triage
+                    </strong>
+                </p>
+            </div>
+        </div>
+
+
+        <nav class="navigation-secondary">
+            <ul>
+              <li>
+                <a href="#" class="active" aria-current="section">Detail</a>
+              </li>
+             
+
+            
+
+           
+            </ul>
+          </nav>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <br>
+                    <h2 class="govuk-heading-m" >Detail</h2>
+                    <p class="govuk-body-m">
+                      Where is a user having to repeat themselves? Typing the same thing in multiple places.
+                    </p>
+
+                   
+                   
+                      
+                      <h2 class="govuk-heading-s" >The team want to find out: </h2>
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>We think people are frequently repeating themselves which is frustrating and wastes time</li>
+                        <li>Are many justification text boxes copied and pasted?</li>
+                        <li>Are they using the 'why did you recommend this?' box as a PSS in disguise?</li>
+                      </ul>
+
+                
+
+                     
+            </div>
+        </div>
+
+ 
+      
+
+    </main>
+  </div>
+{% endblock %}
