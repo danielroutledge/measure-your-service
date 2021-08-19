@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% set bodyAttributes = { id: "service" } %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+  <div class="govuk-width-container {{ containerClasses }}">
+   
+   
+    <a href="has-pmf" class="govuk-back-link">Back</a>
+    
+     
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div id="passport-issued-hint" class="hypothesis-label">
+                    Hypothesis 1
+                </div>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+                  4 headings in justification box
+                </h1>
+                <p class="govuk-body-l">
+                  <strong class="govuk-tag govuk-tag--blue">
+                    Insight
+                  </strong>
+                </p>
+            </div>
+        </div>
+
+
+        <nav class="navigation-secondary">
+            <ul>
+              <li>
+                <a href="hypothesis-0001">Detail</a>
+              </li>
+             
+
+              <li>
+                <a href="data-0001">Data</a>
+              </li>
+
+              <li>
+                <a href="#" class="active" aria-current="section">Insight</a>
+              </li>
+             
+
+           
+            </ul>
+          </nav>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <br>
+                    <h2 class="govuk-heading-m" >Insight</h2>
+                    <p class="govuk-body-m">
+                     Key findings go here.
+                    </p>
+
+                    
+
+                
+
+                     
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+              
+
+
+              </div>
+        </div>
+
+ 
+      
+
+    </main>
+  </div>
+{% endblock %}
