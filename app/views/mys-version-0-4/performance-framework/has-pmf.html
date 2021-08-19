@@ -77,8 +77,8 @@
                     </td>
 
                     <td class="govuk-table__cell">
-                      <strong class="govuk-tag govuk-tag--green">
-                        Supported by data
+                      <strong class="govuk-tag govuk-tag--blue">
+                        Insight
                       </strong>
                     </td>
                   </tr>
@@ -96,7 +96,7 @@
 
                     <td class="govuk-table__cell">
                       <strong class="govuk-tag govuk-tag--green">
-                        Supported by data
+                        Measuring
                       </strong>
                     </td>
                   </tr>
@@ -106,15 +106,15 @@
                        03
                     </td>
                     <td class="govuk-table__cell">
-                      Repeat content
+                      <a href="hypothesis-0003"> Repeat content</a>
                     </td>
                     <td class="govuk-table__cell">
                       Where is a user having to repeat themselves? Typing the same thing in multiple places.
                     </td>
 
                     <td class="govuk-table__cell">
-                      <strong class="govuk-tag govuk-tag--grey">
-                        Not yet supported
+                      <strong class="govuk-tag govuk-tag--yellow">
+                        Triage
                       </strong>
                     </td>
                   </tr>
@@ -133,16 +133,40 @@
 
                     <td class="govuk-table__cell">
                       <strong class="govuk-tag govuk-tag--grey">
-                        Not yet supported
+                        Hypothesis <br>submitted
                       </strong>
                     </td>
                   </tr>
+
+
+                  {% if  data['current-problem'] %}
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                       05
+                    </td>
+                    <td class="govuk-table__cell">
+                      {{ data['hyp-title'] }}
+                    </td>
+                    <td class="govuk-table__cell">
+                      {{ data['current-problem'] }}
+                    </td>
+
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Hypothesis <br>submitted
+                      </strong>
+                    </td>
+                  </tr>
+                  {% endif %}
                   
                
 
                 </tbody>
               </table>
 
+              <h2 class="govuk-heading-m">Raise a new hypothesis</h2>
+
+              <p>To raise a new hypothesis complete a ticket for Teal to get back to your team.</p>
               <a href="new-hypothesis">
               <button class="govuk-button" data-module="govuk-button">
                 Raise a new hypothesis
